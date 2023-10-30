@@ -9,8 +9,8 @@
 // Email Lists: Images.
 if ( ! $this->is_branding_hidden ) :
 	$image_attrs = array(
-		'path'        => self::$plugin_url . 'assets/images/hustle-empty-message.png',
-		'retina_path' => self::$plugin_url . 'assets/images/hustle-empty-message@2x.png',
+		'path'        => self::$plugin_url . 'assets/images/no-result.png',
+		'retina_path' => self::$plugin_url . 'assets/images/no-result@2x.png',
 	);
 else :
 	$image_attrs = array(
@@ -134,15 +134,7 @@ if ( $is_module_selected ) :
 	<?php } else { ?>
 
 		<div class="sui-box sui-message">
-			<?php
-			$close_image_attrs = $image_attrs;
-			if ( ! $this->is_branding_hidden ) {
-				$close_image_attrs['path']        = self::$plugin_url . 'assets/images/hustle-email-lists.png';
-				$close_image_attrs['retina_path'] = self::$plugin_url . 'assets/images/hustle-email-lists@2x.png';
-			}
-
-			$this->render( 'admin/image-markup', $close_image_attrs );
-			?>
+			<?php $this->render( 'admin/image-markup', $image_attrs ); ?>
 			<div class="sui-message-content">
 
 				<h2><?php esc_html_e( 'Almost there!', 'hustle' ); ?></h2>

@@ -1075,35 +1075,128 @@ class Helper_Functions {
 		return $classes;
 	}
 
-    /**
-     * Round Numbers In A Reading-friendly Format.
-     *
-     * @param integer $num followers number.
-     */
-    public static function premium_format_numbers( $num ) {
-        $num    = intval( $num );
-        $result = '';
+	/**
+	 * Round Numbers In A Reading-friendly Format.
+	 *
+	 * @param integer $num followers number.
+	 */
+	public static function premium_format_numbers( $num ) {
+		$num    = intval( $num );
+		$result = '';
 
-        if ( $num >= 1000000000 ) {
-            $tmp    = round( ( $num / 1000000 ), 1 );
-            $result = $tmp . 'B';
-            return $result;
-        }
+		if ( $num >= 1000000000 ) {
+			$tmp    = round( ( $num / 1000000 ), 1 );
+			$result = $tmp . 'B';
+			return $result;
+		}
 
-        if ( $num >= 1000000 ) {
-            $tmp    = round( ( $num / 1000000 ), 1 );
-            $result = $tmp . 'M';
-            return $result;
-        }
+		if ( $num >= 1000000 ) {
+			$tmp    = round( ( $num / 1000000 ), 1 );
+			$result = $tmp . 'M';
+			return $result;
+		}
 
-        if ( $num >= 1000 ) {
-            $tmp    = round( ( $num / 1000 ), 1 );
-            $result = $tmp . 'K';
+		if ( $num >= 1000 ) {
+			$tmp    = round( ( $num / 1000 ), 1 );
+			$result = $tmp . 'K';
 
-            return $result;
-        }
+			return $result;
+		}
 
-        return round( $num, 1 );
-    }
+		return round( $num, 1 );
+	}
+
+	/**
+	 * Get Contact Form Body
+	 *
+	 * @since 4.10.2
+	 * @access public
+	 *
+	 * @param string $preset form preset.
+	 *
+	 * @return void
+	 */
+	public static function get_cf_form_body( $preset ) {
+
+		$forms_array = array(
+
+			'preset1' => '<div class="premium-cf-full"><label class="premium-cf-label">Email</label>
+            [email* email-1 class:premium-cf-field placeholder "john@smith.com"]</div>
+            [submit "Subscribe"]',
+
+			'preset2' => '<div class="premium-cf-full"><label class="premium-cf-label">Name</label>
+            [text* text-1 class:premium-cf-field placeholder "John Smith"]</div>
+
+            <div class="premium-cf-full"><label class="premium-cf-label">Email</label>
+            [email* email-1 class:premium-cf-field placeholder "john@smith.com"]</div>
+
+            [submit "Send"]',
+
+			'preset3' => '<div class="premium-cf-full"><label class="premium-cf-label">Name</label>
+            [text* text-1 class:premium-cf-field placeholder "John Smith"]</div>
+
+            <div class="premium-cf-full"><label class="premium-cf-label">Email</label>
+            [email* email-1 class:premium-cf-field placeholder "john@smith.com"]</div>
+
+            <div class="premium-cf-full"><label class="premium-cf-label">Message</label>
+            [textarea* textarea-1 class:premium-cf-field placeholder "Enter your message here..."]</div>
+
+            [submit "Send"]',
+
+			'preset4' => '<div class="premium-cf-half"><label class="premium-cf-label">Name</label>
+            [text* text-1 class:premium-cf-field placeholder "John Smith"]</div>
+
+            <div class="premium-cf-half"><label class="premium-cf-label">Email</label>
+            [email* email-1 class:premium-cf-field placeholder "john@smith.com"]</div>
+
+            <div class="premium-cf-full"><label class="premium-cf-label">Message</label>
+            [textarea* textarea-1 class:premium-cf-field placeholder "Enter your message here..."]</div>
+
+            [submit "Send"]',
+
+			'preset5' => '<div class="premium-cf-half"><label class="premium-cf-label">First Name</label>
+            [text* text-1 class:premium-cf-field placeholder "John"]</div>
+
+            <div class="premium-cf-half"><label class="premium-cf-label">Last Name</label>
+            [text* text-2 class:premium-cf-field placeholder "Smith"]</div>
+
+            <div class="premium-cf-half"><label class="premium-cf-label">Email</label>
+            [email* email-1 class:premium-cf-field placeholder "john@smith.com"]</div>
+
+            <div class="premium-cf-half"><label class="premium-cf-label">Phone</label>
+            [tel* tel-1 class:premium-cf-field placeholder "+13137262547"]</div>
+
+            <div class="premium-cf-full"><label class="premium-cf-label">Gender</label>
+            [select menu-1 "Male" "Female"]</div>
+
+            <div class="premium-cf-full"><label class="premium-cf-label">Message</label>
+            [textarea* textarea-1 class:premium-cf-field placeholder "Enter your message here..."]</div>
+            [submit "Send"]',
+
+			'preset6' => '<div class="premium-cf-half"><label class="premium-cf-label">First Name</label>
+            [text* text-1 class:premium-cf-field placeholder "John"]</div>
+
+            <div class="premium-cf-half"><label class="premium-cf-label">Last Name</label>
+            [text* text-2 class:premium-cf-field placeholder "Smith"]</div>
+
+            <div class="premium-cf-half"><label class="premium-cf-label">Email</label>
+            [email* email-1 class:premium-cf-field placeholder "john@smith.com"]</div>
+
+            <div class="premium-cf-half"><label class="premium-cf-label">Phone</label>
+            [tel* tel-1 class:premium-cf-field placeholder "+13137262547"]</div>
+
+			<div class="premium-cf-full"><label class="premium-cf-label">Company Size</label>
+            [radio radio-1 default:1 "1-10 employees" "11-30 employees" "30-50 employees" "Above 50 employee"]
+			</div>
+
+            <div class="premium-cf-full"><label class="premium-cf-label">Message</label>
+            [textarea* textarea-1 class:premium-cf-field placeholder "Enter your message here..."]</div>
+            [submit "Send"]',
+
+		);
+
+		return $forms_array[ $preset ]; // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped
+
+	}
 
 }

@@ -269,8 +269,8 @@ class Woo_Products extends Widget_Base {
 				'default'   => 'grid',
 				'options'   => array(
 					'grid'     => __( 'Grid', 'premium-addons-for-elementor' ),
-					// 'metro'    => __( 'Metro', 'premium-addons-for-elementor' ),
 					'carousel' => __( 'Carousel', 'premium-addons-for-elementor' ),
+					'masonry' => __( 'Masonry', 'premium-addons-for-elementor' ),
 				),
 				'condition' => array(
 					'_skin!' => $pro_skins,
@@ -306,7 +306,7 @@ class Woo_Products extends Widget_Base {
 			array(
 				'label'     => __( 'Grid', 'premium-addons-for-elementor' ),
 				'condition' => array(
-					'layout_type' => array( 'grid', 'metro' ),
+					'layout_type' => array( 'grid', 'masonry' ),
 					'_skin!'      => $pro_skins,
 				),
 			)
@@ -333,54 +333,7 @@ class Woo_Products extends Widget_Base {
 					'{{WRAPPER}} .premium-woo-products-inner li.product' => 'width: {{VALUE}}',
 				),
 				'condition'      => array(
-					'layout_type' => 'grid',
-				),
-			)
-		);
-
-		$this->add_control(
-			'metro_style',
-			array(
-				'label'       => __( 'Metro Style', 'premium-addons-for-elementor' ),
-				'type'        => Controls_Manager::SELECT,
-				'options'     => array(
-					'style1' => __( 'Style 1', 'premium-addons-for-elementor' ),
-					'style2' => __( 'style 2', 'premium-addons-for-elementor' ),
-					'style3' => __( 'style 4', 'premium-addons-for-elementor' ),
-					'custom' => __( 'Custom', 'premium-addons-for-elementor' ),
-				),
-				'default'     => 'style1',
-				'render_type' => 'template',
-				'condition'   => array(
-					'layout_type' => 'metro',
-				),
-			)
-		);
-
-		$this->add_responsive_control(
-			'width_pattern',
-			array(
-				'label'       => __( 'Width Pattern', 'premium-addons-for-elementor' ),
-				'description' => __( 'Each row is divided into 12 cells. Add widths for the products separated by comma, for example: 6,3,3', 'premium-addons-for-elementor' ),
-				'default'     => '6,3,3',
-				'type'        => Controls_Manager::TEXT,
-				'condition'   => array(
-					'layout_type' => 'metro',
-					'metro_style' => 'custom',
-				),
-			)
-		);
-
-		$this->add_responsive_control(
-			'height_pattern',
-			array(
-				'label'       => __( 'Height Pattern', 'premium-addons-for-elementor' ),
-				'description' => __( 'Each row is divided into 12 cells. Add heights for the products separated by comma, for example: 6,3,3', 'premium-addons-for-elementor' ),
-				'default'     => '6,3,3',
-				'type'        => Controls_Manager::TEXT,
-				'condition'   => array(
-					'layout_type' => 'metro',
-					'metro_style' => 'custom',
+					'layout_type' => array( 'grid', 'masonry' ),
 				),
 			)
 		);
@@ -769,6 +722,37 @@ class Woo_Products extends Widget_Base {
 		);
 
 		$this->add_control(
+			'product_filter_rule',
+			array(
+				'label'     => __( 'Product Filter Rule', 'premium-addons-for-elementor' ),
+				'type'      => Controls_Manager::SELECT,
+				'default'   => 'post__in',
+				'options'   => array(
+					'post__in'     => __( 'Match Product', 'premium-addons-for-elementor' ),
+					'post__not_in' => __( 'Exclude Product', 'premium-addons-for-elementor' ),
+				),
+				'condition' => array(
+					'query_type' => 'custom',
+				),
+			)
+		);
+
+		$products = Premium_Template_Tags::get_default_posts_list( 'product' );
+
+		$this->add_control(
+			'products',
+			array(
+				'label'     => __( 'Select Products', 'premium-addons-for-elementor' ),
+				'type'      => Controls_Manager::SELECT2,
+				'multiple'  => true,
+				'options'   => $products,
+				'condition' => array(
+					'query_type' => 'custom',
+				),
+			)
+		);
+
+		$this->add_control(
 			'offset',
 			array(
 				'label'       => __( 'Offset', 'premium-addons-for-elementor' ),
@@ -892,7 +876,7 @@ class Woo_Products extends Widget_Base {
 			array(
 				'label'     => __( 'Pagination', 'premium-addons-for-elementor' ),
 				'condition' => array(
-					'layout_type' => array( 'grid', 'metro' ),
+					'layout_type' => array( 'grid', 'masonry' ),
 					'load_more!'  => 'yes',
 					'_skin!'      => $pro_skins,
 					'query_type!' => array( 'cross-sells', 'up-sells' ),
@@ -1289,7 +1273,7 @@ class Woo_Products extends Widget_Base {
 					'{{WRAPPER}} .premium-woocommerce li.product' => 'margin-bottom: {{SIZE}}{{UNIT}};',
 				),
 				'condition'   => array(
-					'layout_type' => array( 'grid', 'metro' ),
+					'layout_type' => array( 'grid', 'masonry' ),
 				),
 			)
 		);
@@ -1504,7 +1488,7 @@ class Woo_Products extends Widget_Base {
 				'label'     => __( 'Load More Button', 'premium-addons-for-elementor' ),
 				'tab'       => Controls_Manager::TAB_STYLE,
 				'condition' => array(
-					'layout_type' => array( 'grid', 'metro' ),
+					'layout_type' => array( 'grid', 'masonry' ),
 					'load_more'   => 'yes',
 					'pagination!' => 'yes',
 					'_skin!'      => $pro_skins,
@@ -1738,7 +1722,7 @@ class Woo_Products extends Widget_Base {
 				'label'     => __( 'Pagination', 'premium-addons-for-elementor' ),
 				'tab'       => Controls_Manager::TAB_STYLE,
 				'condition' => array(
-					'layout_type' => array( 'grid', 'metro' ),
+					'layout_type' => array( 'grid', 'masonry' ),
 					'load_more!'  => 'yes',
 					'pagination'  => 'yes',
 					'_skin!'      => $pro_skins,

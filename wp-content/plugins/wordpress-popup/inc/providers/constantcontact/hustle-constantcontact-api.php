@@ -159,7 +159,10 @@ if ( version_compare( PHP_VERSION, '5.3', '>=' ) ) {
 				return $this->redirect_uri(
 					'constantcontact',
 					'authorize',
-					array( 'client_id' => self::CLIENT_ID )
+					array(
+						'client_id' => self::CLIENT_ID,
+						'state'     => rawurlencode( $this->get_nonce_value() . '|' . site_url( '/' ) ),
+					)
 				);
 			}
 

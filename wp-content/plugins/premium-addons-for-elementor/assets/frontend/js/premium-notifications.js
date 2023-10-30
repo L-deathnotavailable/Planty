@@ -9,6 +9,7 @@
 
                 return {
                     selectors: {
+                        user: '.fa-user',
                         outerWrap: '.pa-recent-notification',
                         iconWrap: '.pa-rec-not-icon-wrap',
                         postsContainer: '.pa-rec-posts-container',

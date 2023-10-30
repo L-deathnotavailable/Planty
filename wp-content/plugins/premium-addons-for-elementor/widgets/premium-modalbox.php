@@ -547,7 +547,8 @@ class Premium_Modalbox extends Widget_Base {
 				),
 				'default'   => 'icon',
 				'condition' => array(
-					'premium_modal_box_display_on' => 'button',
+					'premium_modal_box_icon_switcher' => 'yes',
+					'premium_modal_box_display_on'    => 'button',
 				),
 			)
 		);
@@ -1966,6 +1967,17 @@ class Premium_Modalbox extends Widget_Base {
 				'type'      => Controls_Manager::COLOR,
 				'selectors' => array(
 					'{{WRAPPER}} .premium-modal-box-modal-body'  => 'background: {{VALUE}};',
+				),
+			)
+		);
+
+		$this->add_control(
+			'box_background',
+			array(
+				'label'     => __( 'Box Background Color', 'premium-addons-for-elementor' ),
+				'type'      => Controls_Manager::COLOR,
+				'selectors' => array(
+					'{{WRAPPER}} .premium-modal-box-modal-dialog'  => 'background: {{VALUE}};',
 				),
 			)
 		);

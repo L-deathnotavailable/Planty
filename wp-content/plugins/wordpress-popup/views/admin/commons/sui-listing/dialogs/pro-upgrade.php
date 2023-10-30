@@ -64,14 +64,6 @@
 
 			</div>
 
-			<img
-				src="<?php echo esc_url( self::$plugin_url . 'assets/images/dev-team.png' ); ?>"
-				srcset="<?php echo esc_url( self::$plugin_url . 'assets/images/dev-team.png' ); ?> 1x, <?php echo esc_url( self::$plugin_url . 'assets/images/dev-team@2x.png' ); ?> 2x"
-				alt="<?php esc_html_e( 'Upgrade to Hustle Pro!', 'hustle' ); ?>"
-				class="sui-image sui-image-center"
-				aria-hidden="true"
-			/>
-
 		</div>
 
 	</div>

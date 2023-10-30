@@ -14,8 +14,8 @@
 	<?php
 	if ( ! $this->is_branding_hidden ) :
 		$image_attrs = array(
-			'path'        => self::$plugin_url . 'assets/images/hustle-welcome.png',
-			'retina_path' => self::$plugin_url . 'assets/images/hustle-welcome@2x.png',
+			'path'        => self::$plugin_url . 'assets/images/no-result.png',
+			'retina_path' => self::$plugin_url . 'assets/images/no-result@2x.png',
 		);
 	else :
 		$image_attrs = array(

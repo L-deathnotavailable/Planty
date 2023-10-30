@@ -54,7 +54,6 @@ class Hustle_Activecampaign_Api {
 		$args = array_merge(
 			array(
 				'api_action' => $action,
-				'api_key'    => $this->key,
 				'api_output' => 'json',
 			),
 			$args
@@ -62,14 +61,13 @@ class Hustle_Activecampaign_Api {
 
 		$headers = array(
 			'Content-Type' => 'application/x-www-form-urlencoded',
+			'API-TOKEN'    => $this->key,
 		);
 
 		$_args = array(
 			'method'  => $verb,
 			'headers' => $headers,
 		);
-
-		$request_data = $args;
 
 		if ( 'GET' === $verb ) {
 			$url .= ( '?' . http_build_query( $args ) );

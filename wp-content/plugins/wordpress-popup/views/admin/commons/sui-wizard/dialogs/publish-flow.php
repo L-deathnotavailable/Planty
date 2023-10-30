@@ -54,22 +54,4 @@ $attributes = array(
 	),
 );
 
-if ( ! $this->is_branding_hidden ) :
-	$image_attrs = array(
-		'path'        => self::$plugin_url . 'assets/images/hustle-summary.png',
-		'retina_path' => self::$plugin_url . 'assets/images/hustle-summary@2x.png',
-		'width'       => 'auto',
-		'height'      => 120,
-	);
-else :
-	$image_attrs = array(
-		'path'   => $this->branding_image,
-		'width'  => 172,
-		'height' => 192,
-	);
-endif;
-$image_attrs['class'] = 'sui-image sui-image-center';
-
-$attributes['after_body_content'] = $this->render( 'admin/image-markup', $image_attrs, true );
-
 $this->render_modal( $attributes );

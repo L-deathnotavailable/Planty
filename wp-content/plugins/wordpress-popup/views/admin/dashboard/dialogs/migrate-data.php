@@ -37,8 +37,8 @@ $username = ! empty( $user->user_firstname ) ? $user->user_firstname : $user->us
 						<figure class="sui-box-banner" role="banner" aria-hidden="true">
 							<?php
 							$image_attrs = array(
-								'path'        => self::$plugin_url . 'assets/images/onboard-welcome.png',
-								'retina_path' => self::$plugin_url . 'assets/images/onboard-welcome@2x.png',
+								'path'        => self::$plugin_url . 'assets/images/onboard-image.png',
+								'retina_path' => self::$plugin_url . 'assets/images/onboard-image@2x.png',
 								'class'       => 'sui-image sui-image-center',
 							);
 
@@ -227,8 +227,8 @@ $username = ! empty( $user->user_firstname ) ? $user->user_firstname : $user->us
 					<figure class="sui-box-banner" role="banner" aria-hidden="true">
 						<?php
 						$image_attrs = array(
-							'path'        => self::$plugin_url . 'assets/images/onboard-create.png',
-							'retina_path' => self::$plugin_url . 'assets/images/onboard-create@2x.png',
+							'path'        => self::$plugin_url . 'assets/images/onboard-image.png',
+							'retina_path' => self::$plugin_url . 'assets/images/onboard-image@2x.png',
 							'class'       => 'sui-image sui-image-center',
 						);
 

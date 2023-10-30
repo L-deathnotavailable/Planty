@@ -21,4 +21,18 @@ if ( !function_exists( 'child_theme_configurator_css' ) ):
 endif;
 add_action( 'wp_enqueue_scripts', 'child_theme_configurator_css', 10 );
 
+function add_admin_link_to_menu( $items, $args ) {
+    if ( is_user_logged_in() && $args->menu === 'menu-principal') {
+        $dashboard_url = admin_url();
+
+        $admin_link = '<li class="admin-item menu-item"><a href="' . esc_url( $dashboard_url ) . '" class="hfe-menu-item">Admin</a></li>';
+
+        $items_array = explode( '</li>', $items );
+        array_splice( $items_array, 1, 0, $admin_link );
+        $items = implode( '</li>', $items_array );
+    }
+    return $items;
+}
+
+add_filter( 'wp_nav_menu_items', 'add_admin_link_to_menu', 10, 2 );
 // END ENQUEUE PARENT ACTION

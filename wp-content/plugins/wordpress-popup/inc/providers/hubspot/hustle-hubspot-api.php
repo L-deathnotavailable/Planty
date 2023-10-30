@@ -109,12 +109,16 @@ if ( ! class_exists( 'Hustle_HubSpot_Api' ) ) :
 		 *
 		 * @return string
 		 */
-		public function get_redirect_uri() {
-			return $this->redirect_uri(
-				'hubspot',
-				'authorize',
-				array( 'client_id' => self::CLIENT_ID )
+		private function get_redirect_uri() {
+			$params = wp_parse_args(
+				array(
+					'action'    => 'authorize',
+					'provider'  => 'hubspot',
+					'client_id' => self::CLIENT_ID,
+				)
 			);
+
+			return add_query_arg( $params, self::REDIRECT_URI );
 		}
 
 		/**
@@ -313,13 +317,6 @@ if ( ! class_exists( 'Hustle_HubSpot_Api' ) ) :
 		 * @return string
 		 */
 		public function get_authorization_uri( $module_id = 0, $log_referrer = true, $page = 'hustle_embedded' ) {
-			$args = array(
-				'client_id'    => self::CLIENT_ID,
-				'scope'        => self::SCOPE,
-				'redirect_uri' => $this->get_redirect_uri(),
-			);
-			$args = http_build_query( $args );
-
 			if ( $log_referrer ) {
 
 				$params = array(
@@ -339,7 +336,17 @@ if ( ! class_exists( 'Hustle_HubSpot_Api' ) ) :
 				update_option( self::CURRENTPAGE, $page );
 			}
 
-			return self::BASE_URL . 'oauth/authorize?' . $args;
+			$auth_url = add_query_arg(
+				array(
+					'client_id'    => self::CLIENT_ID,
+					'scope'        => rawurlencode( self::SCOPE ),
+					'redirect_uri' => rawurlencode( $this->get_redirect_uri() ),
+					'state'        => rawurlencode( $this->get_nonce_value() . '|' . site_url( '/' ) ),
+				),
+				self::BASE_URL . 'oauth/authorize'
+			);
+
+			return $auth_url;
 		}
 
 		/**

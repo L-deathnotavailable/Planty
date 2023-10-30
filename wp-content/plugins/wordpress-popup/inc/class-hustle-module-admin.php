@@ -121,9 +121,9 @@ if ( ! class_exists( 'Hustle_Module_Admin' ) ) :
 
 			if ( $plugin === $plugin_file ) {
 				$admin_url    = admin_url( 'admin.php' );
-				$settings_url = add_query_arg( 'page', 'hustle_settings', $admin_url );
+				$settings_url = add_query_arg( 'page', 'hustle', $admin_url );
 				$links        = array(
-					'settings' => '<a href="' . esc_url( $settings_url ) . '">' . esc_html__( 'Settings', 'hustle' ) . '</a>',
+					'settings' => '<a href="' . esc_url( $settings_url ) . '">' . esc_html__( 'Dashboard', 'hustle' ) . '</a>',
 					'docs'     => '<a href="' . esc_url( Opt_In_Utils::get_link( 'docs', 'hustle_pluginlist_docs' ) ) . '" target="_blank">' . esc_html__( 'Docs', 'hustle' ) . '</a>',
 				);
 
@@ -131,7 +131,7 @@ if ( ! class_exists( 'Hustle_Module_Admin' ) ) :
 				if ( Opt_In_Utils::is_free() ) {
 					if ( ! Opt_In_Utils::is_hustle_included_in_membership() ) {
 						$url   = Opt_In_Utils::get_link( 'wpmudev', 'hustle_pluginlist_upgrade' );
-						$label = __( 'Upgrade to Hustle Pro', 'hustle' );
+						$label = __( 'Upgrade For 60% Off!', 'hustle' );
 					} else {
 						$url   = Opt_In_Utils::get_link( 'install_plugin' );
 						$label = __( 'Upgrade', 'hustle' );

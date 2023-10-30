@@ -35,7 +35,7 @@ if ( ! class_exists( 'Hustle_Db' ) ) :
 		 *
 		 * @since 4.0.0
 		 */
-		const DB_VERSION = '4.0';
+		const DB_VERSION = '4.8.2';
 
 		/**
 		 * Store module's entries.
@@ -113,7 +113,27 @@ if ( ! class_exists( 'Hustle_Db' ) ) :
 				$result = dbDelta( $sql );
 			}
 
+			self::remove_old_columns();
+
 			update_option( self::DB_VERSION_KEY, self::DB_VERSION );
+		}
+
+		/**
+		 * Remove old columns
+		 *
+		 * @global object $wpdb
+		 */
+		private static function remove_old_columns() {
+			$stored_db_version = get_option( self::DB_VERSION_KEY, 0 );
+			if ( version_compare( $stored_db_version, '4.8.2', '<' ) ) {
+				// Clean up the `test_mode` column removed from schema in version before 4.0.
+				global $wpdb;
+				$modules_table    = self::modules_table();
+				$test_mode_exists = $wpdb->get_var( "SHOW COLUMNS FROM {$modules_table} LIKE 'test_mode'" ); // phpcs:ignore WordPress.DB.DirectDatabaseQuery.DirectQuery,WordPress.DB.DirectDatabaseQuery.NoCaching,WordPress.DB.PreparedSQL.InterpolatedNotPrepared
+				if ( ! is_null( $test_mode_exists ) ) {
+					$wpdb->query( "ALTER TABLE {$modules_table} DROP COLUMN `test_mode`" ); // phpcs:ignore WordPress.DB.DirectDatabaseQuery.DirectQuery,WordPress.DB.DirectDatabaseQuery.NoCaching,WordPress.DB.PreparedSQL.InterpolatedNotPrepared,WordPress.DB.DirectDatabaseQuery.SchemaChange
+				}
+			}
 		}
 
 		/**

@@ -64,7 +64,7 @@ if ( ! class_exists( 'Hustle_SendinBlue' ) ) :
 		 * @since 3.0.5
 		 * @var string
 		 */
-		protected $title = 'SendinBlue';
+		protected $title = 'Brevo';
 
 		/**
 		 * Class name of form settings
@@ -184,7 +184,7 @@ if ( ! class_exists( 'Hustle_SendinBlue' ) ) :
 				if ( ! $has_errors ) {
 
 					return array(
-						'html'         => Hustle_Provider_Utils::get_integration_modal_title_markup( __( 'SendinBlue Added', 'hustle' ), __( 'You can now go to your pop-ups, slide-ins and embeds and assign them to this integration', 'hustle' ) ),
+						'html'         => Hustle_Provider_Utils::get_integration_modal_title_markup( __( 'Brevo Added', 'hustle' ), __( 'You can now go to your pop-ups, slide-ins and embeds and assign them to this integration', 'hustle' ) ),
 						'buttons'      => array(
 							'close' => array(
 								'markup' => Hustle_Provider_Utils::get_provider_button_markup( __( 'Close', 'hustle' ), 'sui-button-ghost', 'close' ),
@@ -222,7 +222,7 @@ if ( ! class_exists( 'Hustle_SendinBlue' ) ) :
 						'error'   => array(
 							'type'  => 'error',
 							'class' => $api_key_validated ? 'sui-hidden' : '',
-							'value' => __( 'Please enter a valid SendinBlue API key', 'hustle' ),
+							'value' => __( 'Please enter a valid Brevo API key', 'hustle' ),
 						),
 					),
 				),
@@ -261,10 +261,10 @@ if ( ! class_exists( 'Hustle_SendinBlue' ) ) :
 			}
 
 			$step_html = Hustle_Provider_Utils::get_integration_modal_title_markup(
-				__( 'Configure SendinBlue', 'hustle' ),
+				__( 'Configure Brevo', 'hustle' ),
 				sprintf(
-					/* translators: 1. opening 'a' tag to sSendinBlue API page, 2. closing 'a' tag */
-					__( 'To get %1$sSendinBlue%2$s API key v3.0 log in %3$scampaigns dashboard%4$s and click on %1$sSMTP & API%2$s in left menu.', 'hustle' ),
+					/* translators: 1. opening 'a' tag to Brevo API page, 2. closing 'a' tag */
+					__( 'To get %1$sBrevo%2$s API key v3.0 log in %3$scampaigns dashboard%4$s and click on %1$sSMTP & API%2$s in left menu.', 'hustle' ),
 					'<strong>',
 					'</strong>',
 					'<a href="https://account.sendinblue.com/advanced/api" target="_blank">',
@@ -406,7 +406,7 @@ if ( ! class_exists( 'Hustle_SendinBlue' ) ) :
 							update_option( 'hustle_provider_sendinblue_version', $this->get_version() );
 						}
 					} catch ( Excetption $e ) {
-						Opt_In_Utils::maybe_log( 'sendinblue', 'failed to migrate silently', $e->getMessage() );
+						Opt_In_Utils::maybe_log( 'Brevo', 'failed to migrate silently', $e->getMessage() );
 					}
 				}
 			}

@@ -5,6 +5,7 @@ if ('1' === seopress_get_service('GoogleAnalyticsOption')->getHalfDisable() || (
 
     $addToCartOption = seopress_get_service('GoogleAnalyticsOption')->getAddToCart();
     $removeFromCartOption = seopress_get_service('GoogleAnalyticsOption')->getRemoveFromCart();
+    $getViewItemsDetails = seopress_get_service('GoogleAnalyticsOption')->getViewItemsDetails();
 
     if (is_user_logged_in()) {
         global $wp_roles;
@@ -23,6 +24,7 @@ if ('1' === seopress_get_service('GoogleAnalyticsOption')->getHalfDisable() || (
                     }
                     if ('1' === seopress_get_service('GoogleAnalyticsOption')->getMatomoEnable() && '' !== seopress_get_service('GoogleAnalyticsOption')->getMatomoId() && '' !== seopress_get_service('GoogleAnalyticsOption')->getMatomoSiteId()) {
                         add_action('wp_head', 'seopress_matomo_js_arguments', 960, 1);
+                        add_action('wp_body_open', 'seopress_matomo_nojs', 960, 1);
                     }
                     if ('1' === seopress_get_service('GoogleAnalyticsOption')->getClarityEnable() && '' !== seopress_get_service('GoogleAnalyticsOption')->getClarityProjectId()) {
                         add_action('wp_head', 'seopress_clarity_js_arguments', 970, 1);
@@ -33,7 +35,7 @@ if ('1' === seopress_get_service('GoogleAnalyticsOption')->getHalfDisable() || (
 
                     //ecommerce
                     $purchasesOptions = seopress_get_service('GoogleAnalyticsOption')->getPurchases();
-                    if ('1' == $purchasesOptions || '1' == $addToCartOption || '1' == $removeFromCartOption) {
+                    if ('1' === $purchasesOptions || '1' === $addToCartOption || '1' === $removeFromCartOption || '1' === $getViewItemsDetails) {
                         add_action('wp_enqueue_scripts', 'seopress_google_analytics_ecommerce_js', 20, 1);
                     }
                 }
@@ -44,6 +46,7 @@ if ('1' === seopress_get_service('GoogleAnalyticsOption')->getHalfDisable() || (
                 }
                 if ('1' === seopress_get_service('GoogleAnalyticsOption')->getMatomoEnable() && '' !== seopress_get_service('GoogleAnalyticsOption')->getMatomoId() && '' !== seopress_get_service('GoogleAnalyticsOption')->getMatomoSiteId()) {
                     add_action('wp_head', 'seopress_matomo_js_arguments', 960, 1);
+                    add_action('wp_body_open', 'seopress_matomo_nojs', 960, 1);
                 }
                 if ('1' === seopress_get_service('GoogleAnalyticsOption')->getClarityEnable() && '' !== seopress_get_service('GoogleAnalyticsOption')->getClarityProjectId()) {
                     add_action('wp_head', 'seopress_clarity_js_arguments', 970, 1);
@@ -54,7 +57,7 @@ if ('1' === seopress_get_service('GoogleAnalyticsOption')->getHalfDisable() || (
 
                 //ecommerce
                 $purchasesOptions = seopress_get_service('GoogleAnalyticsOption')->getPurchases();
-                if ('1' == $purchasesOptions || '1' == $addToCartOption || '1' == $removeFromCartOption) {
+                if ('1' === $purchasesOptions || '1' === $addToCartOption || '1' === $removeFromCartOption || '1' === $getViewItemsDetails) {
                     add_action('wp_enqueue_scripts', 'seopress_google_analytics_ecommerce_js', 20, 1);
                 }
             }
@@ -66,6 +69,7 @@ if ('1' === seopress_get_service('GoogleAnalyticsOption')->getHalfDisable() || (
         }
         if ('1' === seopress_get_service('GoogleAnalyticsOption')->getMatomoEnable() && '' !== seopress_get_service('GoogleAnalyticsOption')->getMatomoId() && '' !== seopress_get_service('GoogleAnalyticsOption')->getMatomoSiteId()) {
             add_action('wp_head', 'seopress_matomo_js_arguments', 960, 1);
+            add_action('wp_body_open', 'seopress_matomo_nojs', 960, 1);
         }
         if ('1' === seopress_get_service('GoogleAnalyticsOption')->getClarityEnable() && '' !== seopress_get_service('GoogleAnalyticsOption')->getClarityProjectId()) {
             add_action('wp_head', 'seopress_clarity_js_arguments', 970, 1);
@@ -76,7 +80,7 @@ if ('1' === seopress_get_service('GoogleAnalyticsOption')->getHalfDisable() || (
 
         //ecommerce
         $purchasesOptions = seopress_get_service('GoogleAnalyticsOption')->getPurchases();
-        if ('1' == $purchasesOptions || '1' == $addToCartOption || '1' == $removeFromCartOption) {
+        if ('1' === $purchasesOptions || '1' === $addToCartOption || '1' === $removeFromCartOption || '1' === $getViewItemsDetails) {
             add_action('wp_enqueue_scripts', 'seopress_google_analytics_ecommerce_js', 20, 1);
         }
     }

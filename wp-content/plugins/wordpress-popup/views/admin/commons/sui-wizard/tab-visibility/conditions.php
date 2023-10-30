@@ -135,9 +135,9 @@
 						/>
 						<span aria-hidden="true"></span>
 						<span><?php esc_html_e( 'Shortcode', 'hustle' ); ?></span>
-
-						<?php /* translators: module type in small caps and in singular */ ?>
-						<button class="sui-button-icon sui-tooltip sui-tooltip-constrained" data-tooltip="<?php printf( esc_attr__( 'By default, the shortcode displays your %1$s wherever you add it. However, you can apply visibility rules on your %1$s shortcode for better control. For example, you can use visibility rules to show your %1$s to logged-in users only or visitors from a specific country only.', 'hustle' ), esc_html( $smallcaps_singular ) ); ?>" style="width: 22px; height: 22px;">
+						<button class="sui-button-icon sui-tooltip sui-tooltip-constrained"
+							data-tooltip="<?php /* translators: module type in small caps and in singular */ printf( esc_attr__( 'By default, the shortcode displays your %1$s wherever you add it. However, you can apply visibility rules on your %1$s shortcode for better control. For example, you can use visibility rules to show your %1$s to logged-in users only or visitors from a specific country only.', 'hustle' ), esc_html( $smallcaps_singular ) ); ?>"
+							style="width: 22px; height: 22px;pointer-events:auto;margin-left: 2px;">
 							<span class="sui-icon-info" aria-hidden="true"></span>
 						</button>
 
@@ -159,26 +159,6 @@
 			<div class="sui-box-builder-message-block">
 				<?php /* translators: module type in small caps and in singular */ ?>
 				<span class="sui-box-builder-message"><?php printf( esc_html__( 'No visibility condition added yet. Currently, your %s will appear everywhere on your website.', 'hustle' ), esc_html( $smallcaps_singular ) ); ?></span>
-
-				<?php
-				if ( ! $this->is_branding_hidden ) :
-					$image_attrs = array(
-						'path'        => self::$plugin_url . 'assets/images/hustle-visibility.png',
-						'retina_path' => self::$plugin_url . 'assets/images/hustle-visibility@2x.png',
-					);
-				else :
-					$image_attrs = array(
-						'path'   => $this->branding_image,
-						'width'  => 172,
-						'height' => 192,
-					);
-				endif;
-				$image_attrs['class'] = 'sui-image sui-image-center';
-
-				// Image markup.
-				$this->render( 'admin/image-markup', $image_attrs );
-				?>
-
 			</div>
 
 		</div>

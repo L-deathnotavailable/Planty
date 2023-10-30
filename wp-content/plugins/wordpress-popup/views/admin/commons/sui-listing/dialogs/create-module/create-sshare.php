@@ -6,8 +6,6 @@
  * @since 4.3.0
  */
 
-$image_1x = self::$plugin_url . 'assets/images/hustle-create.png';
-$image_2x = self::$plugin_url . 'assets/images/hustle-create@2x.png';
 ?>
 <div class="sui-box">
 
@@ -62,29 +60,5 @@ $image_2x = self::$plugin_url . 'assets/images/hustle-create@2x.png';
 		</div>
 
 	</div>
-
-	<?php if ( ! $this->is_branding_hidden ) { ?>
-		<img
-			src="<?php echo esc_url( $image_1x ); ?>"
-			srcset="<?php echo esc_url( $image_1x ); ?> 1x, <?php echo esc_url( $image_2x ); ?> 2x"
-			<?php /* translators: module's type capitalized and in singular. */ ?>
-			alt="<?php printf( esc_html__( 'Create New %s', 'hustle' ), esc_html( $capitalize_singular ) ); ?>"
-			class="sui-image sui-image-center"
-			aria-hidden="true"
-		/>
-		<?php
-	} else {
-		// Image markup.
-		$this->render(
-			'admin/image-markup',
-			array(
-				'path'   => $this->branding_image,
-				'class'  => 'sui-image sui-image-center',
-				'width'  => 172,
-				'height' => 192,
-			)
-		);
-	}
-	?>
 
 </div>

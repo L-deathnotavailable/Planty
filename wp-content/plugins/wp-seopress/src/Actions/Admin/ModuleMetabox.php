@@ -62,7 +62,7 @@ class ModuleMetabox implements ExecuteHooks
         }
 
         wp_enqueue_media();
-        wp_enqueue_script('seopress-metabox', SEOPRESS_URL_PUBLIC . '/metaboxe.js', $dependencies, uniqid(), true);
+        wp_enqueue_script('seopress-metabox', SEOPRESS_URL_PUBLIC . '/metaboxe.js', $dependencies, SEOPRESS_VERSION, true);
         $value = wp_create_nonce('seopress_rest');
 
         $tags = seopress_get_service('TagsToString')->getTagsAvailable([
@@ -92,6 +92,13 @@ class ModuleMetabox implements ExecuteHooks
         $postType = null;
         if($postId){
             $postType = get_post_type($postId);
+        }
+
+
+        // Compatibility with WooCommerce beta product page
+        if(isset($_GET['path']) && strpos($_GET['path'], 'product') && isset($_GET['page']) && $_GET['page'] === 'wc-admin'){
+            $dataPath = explode('/',$_GET['path']);
+            $postId = $dataPath[count($dataPath)-1];
         }
 
         $args = array_merge([
@@ -158,7 +165,7 @@ class ModuleMetabox implements ExecuteHooks
      */
     public function enqueue($page)
     {
-        if (! in_array($page, ['post.php'], true)) {
+        if (! in_array($page, ['post.php','woocommerce_page_wc-admin'], true)) {
             return;
         }
         $this->enqueueModule();

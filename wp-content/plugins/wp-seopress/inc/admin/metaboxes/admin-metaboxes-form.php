@@ -73,7 +73,10 @@ if ('term.php' == $pagenow || 'edit-tags.php' == $pagenow) { ?>
                             if ('post-new.php' == $pagenow || 'post.php' == $pagenow) {
                                 if ($post && absint($shop_page_id) === absint($post->ID)) { ?>
                         <p class="notice notice-info">
-                            <?php printf(__('This is your <strong>Shop page</strong>. Go to <a href="%s"><strong>SEO > Titles & Metas > Archives > Products</strong></a> to edit your title and meta description.', 'wp-seopress'), admin_url('admin.php?page=seopress-titles')); ?>
+                            <?php
+                                /* translators: %s documentation URL */
+                                printf(__('This is your <strong>Shop page</strong>. Go to <a href="%s"><strong>SEO > Titles & Metas > Archives > Products</strong></a> to edit your title and meta description.', 'wp-seopress'), admin_url('admin.php?page=seopress-titles'));
+                            ?>
                         </p>
                         <?php }
                             }
@@ -81,12 +84,17 @@ if ('term.php' == $pagenow || 'edit-tags.php' == $pagenow) { ?>
                         <div class="box-left">
                             <?php do_action('seopress_titles_title_tab_before', $pagenow); ?>
                             <p>
-                                <label for="seopress_titles_title_meta">
-                                    <?php
-                                    _e('Title', 'wp-seopress');
-                                    echo seopress_tooltip(__('Meta title', 'wp-seopress'), __('Titles are critical to give users a quick insight into the content of a result and why it’s relevant to their query. It\'s often the primary piece of information used to decide which result to click on, so it\'s important to use high-quality titles on your web pages.', 'wp-seopress'), esc_html('<title>My super title</title>'));
-                                ?>
-                                </label>
+                                <span class="seopress-d-flex seopress-mb-1">
+                                    <label for="seopress_titles_title_meta">
+                                        <?php
+                                            _e('Title', 'wp-seopress');
+                                            echo seopress_tooltip(__('Meta title', 'wp-seopress'), __('Titles are critical to give users a quick insight into the content of a result and why it’s relevant to their query. It\'s often the primary piece of information used to decide which result to click on, so it\'s important to use high-quality titles on your web pages.', 'wp-seopress'), esc_html('<title>My super title</title>'));
+                                        ?>
+                                    </label>
+
+                                    <?php do_action('seopress_titles_title_input_before', $pagenow); ?>
+                                </span>
+
                                 <input id="seopress_titles_title_meta" type="text" name="seopress_titles_title"
                                     class="components-text-control__input"
                                     placeholder="<?php esc_html_e('Enter your title', 'wp-seopress'); ?>"
@@ -121,12 +129,16 @@ if ('term.php' == $pagenow || 'edit-tags.php' == $pagenow) { ?>
                                 <?php echo seopress_render_dyn_variables('tag-title'); ?>
                             </div>
                             <p>
-                                <label for="seopress_titles_desc_meta">
-                                    <?php
-                                _e('Meta description', 'wp-seopress');
-                                echo seopress_tooltip(__('Meta description', 'wp-seopress'), __('A meta description tag should generally inform and interest users with a short, relevant summary of what a particular page is about. <br>They are like a pitch that convince the user that the page is exactly what they\'re looking for. <br>There\'s no limit on how long a meta description can be, but the search result snippets are truncated as needed, typically to fit the device width.', 'wp-seopress'), esc_html('<meta name="description" content="my super meta description" />'));
-                            ?>
-                                </label>
+                                <span class="seopress-d-flex seopress-mb-1">
+                                    <label for="seopress_titles_desc_meta">
+                                        <?php
+                                            _e('Meta description', 'wp-seopress');
+                                            echo seopress_tooltip(__('Meta description', 'wp-seopress'), __('A meta description tag should generally inform and interest users with a short, relevant summary of what a particular page is about. <br>They are like a pitch that convince the user that the page is exactly what they\'re looking for. <br>There\'s no limit on how long a meta description can be, but the search result snippets are truncated as needed, typically to fit the device width.', 'wp-seopress'), esc_html('<meta name="description" content="my super meta description" />'));
+                                        ?>
+                                    </label>
+
+                                    <?php do_action('seopress_titles_meta_desc_input_before', $pagenow); ?>
+                                </span>
                                 <textarea id="seopress_titles_desc_meta" rows="4" name="seopress_titles_desc"
                                     class="components-text-control__input"
                                     placeholder="<?php esc_html_e('Enter your meta description', 'wp-seopress'); ?>"
@@ -199,9 +211,9 @@ if ('term.php' == $pagenow || 'edit-tags.php' == $pagenow) { ?>
                     }
                 }
 
-                $siteicon = '<div class="snippet-favicon"><img aria-hidden="true" height="18" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAABs0lEQVR4AWL4//8/RRjO8Iucx+noO0MWUDo16FYABMGP6ZfUcRnWtm27jVPbtm3bttuH2t3eFPcY9pLz7NxiLjCyVd87pKnHyqXyxtCs8APd0rnyxiu4qSeA3QEDrAwBDrT1s1Rc/OrjLZwqVmOSu6+Lamcpp2KKMA9PH1BYXMe1mUP5qotvXTywsOEEYHXxrY+3cqk6TMkYpNr2FeoY3KIr0RPtn9wQ2unlA+GMkRw6+9TFw4YTwDUzx/JVvARj9KaedXRO8P5B1Du2S32smzqUrcKGEyA+uAgQjKX7zf0boWHGfn71jIKj2689gxp7OAGShNcBUmLMPVjZuiKcA2vuWHHDCQxMCz629kXAIU4ApY15QwggAFbfOP9DhgBJ+nWVJ1AZAfICAj1pAlY6hCADZnveQf7bQIwzVONGJonhLIlS9gr5mFg44Xd+4S3XHoGNPdJl1INIwKyEgHckEhgTe1bGiFY9GSFBYUwLh1IkiJUbY407E7syBSFxKTszEoiE/YdrgCEayDmtaJwCI9uu8TKMuZSVfSa4BpGgzvomBR/INhLGzrqDotp01ZR8pn/1L0JN9d9XNyx0AAAAAElFTkSuQmCC" width="18" alt="favicon"></div>';
+                $siteicon = '<div class="snippet-favicon"><img aria-hidden="true" height="26" width="26" alt="favicon" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAABs0lEQVR4AWL4//8/RRjO8Iucx+noO0MWUDo16FYABMGP6ZfUcRnWtm27jVPbtm3bttuH2t3eFPcY9pLz7NxiLjCyVd87pKnHyqXyxtCs8APd0rnyxiu4qSeA3QEDrAwBDrT1s1Rc/OrjLZwqVmOSu6+Lamcpp2KKMA9PH1BYXMe1mUP5qotvXTywsOEEYHXxrY+3cqk6TMkYpNr2FeoY3KIr0RPtn9wQ2unlA+GMkRw6+9TFw4YTwDUzx/JVvARj9KaedXRO8P5B1Du2S32smzqUrcKGEyA+uAgQjKX7zf0boWHGfn71jIKj2689gxp7OAGShNcBUmLMPVjZuiKcA2vuWHHDCQxMCz629kXAIU4ApY15QwggAFbfOP9DhgBJ+nWVJ1AZAfICAj1pAlY6hCADZnveQf7bQIwzVONGJonhLIlS9gr5mFg44Xd+4S3XHoGNPdJl1INIwKyEgHckEhgTe1bGiFY9GSFBYUwLh1IkiJUbY407E7syBSFxKTszEoiE/YdrgCEayDmtaJwCI9uu8TKMuZSVfSa4BpGgzvomBR/INhLGzrqDotp01ZR8pn/1L0JN9d9XNyx0AAAAAElFTkSuQmCC"></div>';
                 if (get_site_icon_url(32)) {
-                    $siteicon = '<div class="snippet-favicon"><img aria-hidden="true" height="18" src="' . get_site_icon_url(32) . '" width="18" alt="favicon"/></div>';
+                    $siteicon = '<div class="snippet-favicon"><img aria-hidden="true" height="26" src="' . get_site_icon_url(32) . '" width="26" alt="favicon"/></div>';
                 } ?>
 
                                 <div class="wrap-snippet">
@@ -304,7 +316,11 @@ if ('term.php' == $pagenow || 'edit-tags.php' == $pagenow) { ?>
                         <?php if (('post' == $typenow || 'product' == $typenow) && ('post.php' == $pagenow || 'post-new.php' == $pagenow)) { ?>
                         <p>
                             <label for="seopress_robots_primary_cat"><?php _e('Select a primary category', 'wp-seopress'); ?></label>
-                            <span class="description"><?php _e('Set the category that gets used in the %category% permalink and in our breadcrumbs if you have multiple categories.', 'wp-seopress'); ?>
+                            <span class="description">
+                                <?php
+                                    _e('Set the category that gets used in the %category% permalink and in our breadcrumbs if you have multiple categories.', 'wp-seopress');
+                                ?>
+                            </span>
                         </p>
                         <select id="seopress_robots_primary_cat" name="seopress_robots_primary_cat">
 
@@ -313,6 +329,9 @@ if ('term.php' == $pagenow || 'edit-tags.php' == $pagenow) { ?>
                     if ('product' == $typenow) {
                         $cats = get_the_terms($post, 'product_cat');
                     }
+
+                    $cats = apply_filters( 'seopress_primary_category_list', $cats );
+
                     if ( ! empty($cats)) { ?>
                             <option <?php echo selected('none', $seopress_robots_primary_cat, false); ?>
                                 value="none"><?php _e('None (will disable this feature)', 'wp-seopress'); ?>
@@ -342,15 +361,16 @@ if ('term.php' == $pagenow || 'edit-tags.php' == $pagenow) { ?>
                                 </svg>
                                 <?php _e('LinkedIn, Instagram, WhatsApp and Pinterest use the same social metadata as Facebook. Twitter does the same if no Twitter cards tags are defined below.', 'wp-seopress'); ?>
                             </p>
-                            <p>
+                            <p class="seopress-d-flex seopress-space-between">
                                 <span class="dashicons dashicons-facebook-alt"></span>
-                            </p>
-                            <p>
-                                <span class="dashicons dashicons-external"></span>
-                                <a href="https://developers.facebook.com/tools/debug/sharing/?q=<?php echo get_permalink(get_the_id()); ?>"
-                                    target="_blank">
-                                    <?php _e('Ask Facebook to update its cache', 'wp-seopress'); ?>
-                                </a>
+
+                                <span>
+                                    <span class="dashicons dashicons-external"></span>
+                                    <a href="https://developers.facebook.com/tools/debug/sharing/?q=<?php echo get_permalink(get_the_id()); ?>"
+                                        target="_blank">
+                                        <?php _e('Ask Facebook to update its cache', 'wp-seopress'); ?>
+                                    </a>
+                                </span>
                             </p>
                             <p>
                                 <label for="seopress_social_fb_title_meta"><?php _e('Facebook Title', 'wp-seopress'); ?></label>
@@ -469,15 +489,15 @@ if ('term.php' == $pagenow || 'edit-tags.php' == $pagenow) { ?>
                         </div>
                         <div class="clear"></div>
                         <div class="box-left">
-                            <p>
+                            <p class="seopress-d-flex seopress-space-between">
                                 <span class="dashicons dashicons-twitter"></span>
-                            </p>
 
-                            <p>
-                                <span class="dashicons dashicons-external"></span>
-                                <a href="https://cards-dev.twitter.com/validator" target="_blank">
-                                    <?php _e('Preview your Twitter card using the official validator', 'wp-seopress'); ?>
-                                </a>
+                                <span>
+                                    <span class="dashicons dashicons-external"></span>
+                                    <a href="https://cards-dev.twitter.com/validator" target="_blank">
+                                        <?php _e('Preview your Twitter card using the official validator', 'wp-seopress'); ?>
+                                    </a>
+                                </span>
                             </p>
                             <p>
                                 <label for="seopress_social_twitter_title_meta"><?php _e('Twitter Title', 'wp-seopress'); ?></label>
@@ -612,7 +632,7 @@ if ('term.php' == $pagenow || 'edit-tags.php' == $pagenow) { ?>
                             </p>
                         <?php } ?>
                         <p>
-                            <label for="seopress_redirections_logged_status"><?php _e('Select a login status: ', 'wp-seopress'); ?></label>
+                            <label for="seopress_redirections_logged_status"><?php _e('Select a login status:', 'wp-seopress'); ?></label>
 
                             <select id="seopress_redirections_logged_status" name="seopress_redirections_logged_status">
                                 <option <?php echo selected('both', $seopress_redirections_logged_status); ?>
@@ -628,7 +648,7 @@ if ('term.php' == $pagenow || 'edit-tags.php' == $pagenow) { ?>
                         </p>
                         <p>
 
-                            <label for="seopress_redirections_type"><?php _e('Select a redirection type: ', 'wp-seopress'); ?></label>
+                            <label for="seopress_redirections_type"><?php _e('Select a redirection type:', 'wp-seopress'); ?></label>
 
                             <select id="seopress_redirections_type" name="seopress_redirections_type">
                                 <option <?php echo selected('301', $seopress_redirections_type, false); ?>

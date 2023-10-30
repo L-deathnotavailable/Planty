@@ -37,8 +37,8 @@ $username = ! empty( $user->user_firstname ) ? $user->user_firstname : $user->us
 						<?php
 						if ( ! $this->is_branding_hidden ) :
 							$image_attrs = array(
-								'path'        => self::$plugin_url . 'assets/images/onboard-welcome.png',
-								'retina_path' => self::$plugin_url . 'assets/images/onboard-welcome@2x.png',
+								'path'        => self::$plugin_url . 'assets/images/onboard-image.png',
+								'retina_path' => self::$plugin_url . 'assets/images/onboard-image@2x.png',
 							);
 						else :
 							$image_attrs = array(

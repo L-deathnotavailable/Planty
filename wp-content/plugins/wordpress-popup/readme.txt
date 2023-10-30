@@ -1,14 +1,14 @@
 === Hustle - Email Marketing, Lead Generation, Optins, Popups ===
 Plugin Name: Hustle - Email Marketing, Lead Generation, Opt-ins, Popups
-Version: 7.8.0
+Version: 7.8.2
 Author: WPMU DEV
 Author URI: https://wpmudev.com/
 Contributors: WPMUDEV
 Tags: marketing, popup, optin, newsletter, subscription form, email, advertise, signup, mailing list, wordpress popup plugin, popup maker, pop-up, opt-in
 Requires at least: 5.2
-Tested up to: 6.2
-Requires PHP: 7.4.33
-Stable tag: 7.8.0
+Tested up to: 6.3
+Requires PHP: 7.4
+Stable tag: 7.8.2
 
 Setup email optin forms, popups, newsletter forms & subscription forms to generate email leads with the best marketing popup builder
 
@@ -185,6 +185,25 @@ No! Hustle gives you all the same settings and options as Hustle Pro. The only d
 
 == Changelog ==
 
+= 7.8.2 ( 2023-10-03 ) =
+
+ - Fix: ConstantContact authentification.
+ - Fix: Cannot edit or add hyperlink
+ - Fix: Click triggers not working for elements loaded after Hustle has loaded
+ - Fix: Popup on exit intent is triggered when select box option is changed
+ - Fix: Text Field error message apostrophe is converted to &#039;
+ - Fix: Deprecated notice for PHP 8.2
+ - Enhance: Update the "Sendinblue" brand name to "Brevo"
+ - Enhance: Remove mascot images
+
+
+= 7.8.1 ( 2023-08-24 ) =
+
+- Enhance: Set up a redirect URL for Hubspot
+- Fix: Issues with Hustle ActiveCampaign integration
+- Fix: Bullet Points are not showing on the success message
+
+
 = 7.8.0 ( 2023-06-27 ) =
 
 - Enhance: Require PHP 7.4 as the minimum supported version
@@ -227,18 +246,6 @@ No! Hustle gives you all the same settings and options as Hustle Pro. The only d
 = 7.6.5 ( 2023-02-20 ) =
 
 - Enhance: Security improvements.
-
-
-= 7.6.4 ( 2023-02-01 ) =
-
-- Enhance: Security improvements.
-
-
-= 7.6.3 ( 2022-12-26 ) =
-
-- Fix: Loading issues with Mobile styles
-- Fix: Vertical Scroll bar in Slide-ins
-- Fix: Conflict with Elementor sliders
 
 [Changelog for previous versions](https://wpmudev.com/project/hustle/#view-changelog).
 

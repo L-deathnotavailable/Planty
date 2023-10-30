@@ -113,33 +113,43 @@
 		<li><?php esc_html_e( 'reCAPTCHA. Enabled when you activate and setup reCAPTCHA on non-Social sharing modules.', 'hustle' ); ?></li>
 		<li><?php esc_html_e( 'Pinterest. Enabled when you activate and setup Pinterest in Social Share Module.', 'hustle' ); ?></li>
 		<li><?php esc_html_e( 'SendGrid. Enabled when you activated and setup SendGrid on Email Collection settings.', 'hustle' ); ?></li>
-		<li><?php esc_html_e( 'SendinBlue. Enabled when you activated and setup SendinBlue on Email Collection settings.', 'hustle' ); ?></li>
+		<li><?php esc_html_e( 'Brevo. Enabled when you activated and setup Brevo on Email Collection settings.', 'hustle' ); ?></li>
 		<li><?php esc_html_e( 'Sendy. Enabled when you activated and setup Sendy on Email Collection settings.', 'hustle' ); ?></li>
 		<li><?php esc_html_e( 'Zapier. Enabled when you activated and setup Zapier on Email Collection settings.', 'hustle' ); ?></li>
 		<?php echo esc_html( $external_integrations_list ); ?>
 	</ul>
 	<p>
 		<strong class="privacy-policy-tutorial"><?php esc_html_e( 'Suggested text: ', 'hustle' ); ?></strong>
-	<p><?php esc_html_e( 'We use ActiveCampaign to manage our subscriber lists. Their privacy policy can be found here : https://www.activecampaign.com/privacy-policy/.', 'hustle' ); ?></p>
-	<p><?php esc_html_e( 'We use Aweber to manage our subscriber. Their privacy policy can be found here : https://www.aweber.com/privacy.htm.', 'hustle' ); ?></p>
-	<p><?php esc_html_e( 'We use Campaign Monitor to manage our subscriber. Their privacy policy can be found here : https://www.campaignmonitor.com/policies/#privacy-policy.', 'hustle' ); ?></p>
-	<p><?php esc_html_e( 'We use Constant Contact to manage our subscriber. Their privacy policy can be found here : https://www.endurance.com/privacy.', 'hustle' ); ?></p>
-	<p><?php esc_html_e( 'We use ConvertKit to manage our subscriber. Their privacy policy can be found here : https://convertkit.com/privacy/.', 'hustle' ); ?></p>
-	<p><?php esc_html_e( 'We use e-Newsletter to manage our subscriber. You can learn more about it here https://wpmudev.com/project/e-newsletter/.', 'hustle' ); ?></p>
-	<p><?php esc_html_e( 'We use GetResponse to manage our subscriber lists. Their privacy policy can be found here : https://www.getresponse.com/legal/privacy.html?lang=en.', 'hustle' ); ?></p>
-	<p><?php esc_html_e( 'We use HubSpot to manage our subscriber. Their privacy policy can be found here : https://legal.hubspot.com/legal-stuff.', 'hustle' ); ?></p>
-	<p><?php esc_html_e( 'We use iContact to manage our subscriber. Their privacy policy can be found here : https://www.icontact.com/legal/privacy.', 'hustle' ); ?></p>
-	<p><?php esc_html_e( 'We use Keap to manage our subscriber. Their privacy policy can be found here : https://keap.com/legal/privacy-policy.', 'hustle' ); ?></p>
-	<p><?php esc_html_e( 'We use Mad Mimi to manage our subscriber. Their privacy policy can be found here : https://madmimi.com/legal/terms.', 'hustle' ); ?></p>
-	<p><?php esc_html_e( 'We use Mailchimp to manage our subscriber list. Their privacy policy can be found here : https://mailchimp.com/legal/privacy/.', 'hustle' ); ?></p>
-	<p><?php esc_html_e( 'We use MailerLite to manage our subscriber. Their privacy policy can be found here : https://www.mailerlite.com/privacy-policy.', 'hustle' ); ?></p>
-	<p><?php esc_html_e( 'We use Mautic to manage our subscriber. Their privacy policy can be found here : https://www.mautic.org/privacy-policy/.', 'hustle' ); ?></p>
-	<p><?php esc_html_e( 'We use Pinterest to share media. Their privacy policy can be found here : https://policy.pinterest.com/privacy-policy/.', 'hustle' ); ?></p>
-	<p><?php esc_html_e( 'We use reCAPTCHA to protect your website from fraud and abuse. Their privacy policy can be found here : https://policies.google.com/privacy.', 'hustle' ); ?></p>
-	<p><?php esc_html_e( 'We use SendGrid to manage our subscriber. Their privacy policy can be found here : https://sendgrid.com/policies/privacy/.', 'hustle' ); ?></p>
-	<p><?php esc_html_e( 'We use SendinBlue to manage our subscriber. Their privacy policy can be found here : https://www.sendinblue.com/legal/privacypolicy/.', 'hustle' ); ?></p>
-	<p><?php esc_html_e( 'We use Sendy to manage our subscriber. Their privacy policy can be found here : https://sendy.co/privacy-policy.', 'hustle' ); ?></p>
-	<p><?php esc_html_e( 'We use Zapier to manage our integration data. Their privacy policy can be found here : https://zapier.com/privacy/.', 'hustle' ); ?></p>
+	<?php
+	$integrations = array(
+		'ActiveCampaign'   => 'https://www.activecampaign.com/privacy-policy/',
+		'Aweber'           => 'https://www.aweber.com/privacy.htm',
+		'Campaign Monitor' => 'https://www.campaignmonitor.com/policies/#privacy-policy',
+		'Constant Contact' => 'https://www.endurance.com/privacy',
+		'ConvertKit'       => 'https://convertkit.com/privacy/',
+		'GetResponse'      => 'https://www.getresponse.com/legal/privacy.html?lang=en',
+		'HubSpot'          => 'https://legal.hubspot.com/legal-stuff',
+		'iContact'         => 'https://www.icontact.com/legal/privacy',
+		'Keap'             => 'https://keap.com/legal/privacy-policy',
+		'Mad Mimi'         => 'https://madmimi.com/legal/terms',
+		'Mailchimp'        => 'https://mailchimp.com/legal/privacy/',
+		'MailerLite'       => 'https://www.mailerlite.com/privacy-policy',
+		'Mautic'           => 'https://www.mautic.org/privacy-policy/',
+		'SendGrid'         => 'https://sendgrid.com/policies/privacy/',
+		'Brevo'            => 'https://www.brevo.com/legal/privacypolicy/',
+		'Sendy'            => 'https://sendy.co/privacy-policy',
+	);
+
+	foreach ( $integrations as $integration_name => $privacy_url ) {
+		?>
+		<p><?php /* translators: 1. Company name 2. Privacy link. */ printf( esc_html__( 'We use %1$s to manage our subscriber lists. Their privacy policy can be found here : %2$s.', 'hustle' ), esc_attr( $integration_name ), esc_url( $privacy_url ) ); ?></p>
+		<?php
+	}
+	?>
+	<p><?php /* translators: 1. Company name 2. Privacy link. */ printf( esc_html__( 'We use %1$s to manage our subscriber. You can learn more about it here %2$s.', 'hustle' ), 'e-Newsletter', 'https://wpmudev.com/project/e-newsletter/' ); ?></p>
+	<p><?php /* translators: 1. Company name 2. Privacy link. */ printf( esc_html__( 'We use %1$s to share media. Their privacy policy can be found here : %2$s.', 'hustle' ), 'Pinterest', 'https://policy.pinterest.com/privacy-policy/' ); ?></p>
+	<p><?php /* translators: 1. Company name 2. Privacy link. */ printf( esc_html__( 'We use %1$s to protect your website from fraud and abuse. Their privacy policy can be found here : %2$s.', 'hustle' ), 'reCAPTCHA', 'https://policies.google.com/privacy' ); ?></p>
+	<p><?php /* translators: 1. Company name 2. Privacy link. */ printf( esc_html__( 'We use %1$s to manage our integration data. Their privacy policy can be found here : %2$s.', 'hustle' ), 'Zapier', 'https://zapier.com/privacy/' ); ?></p>
 	<?php echo esc_html( $external_integrations_privacy_url_list ); ?>
 
 	<h2><?php esc_html_e( 'Cookies', 'hustle' ); ?></h2>

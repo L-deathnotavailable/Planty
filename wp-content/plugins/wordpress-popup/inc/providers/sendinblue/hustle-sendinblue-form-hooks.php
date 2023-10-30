@@ -175,7 +175,7 @@ class Hustle_SendinBlue_Form_Hooks extends Hustle_Provider_Form_Hooks_Abstract {
 				$details = $res->get_error_message();
 			} else {
 				$is_sent       = true;
-				$details       = __( 'Successfully added or updated member on SendinBlue list', 'hustle' );
+				$details       = __( 'Successfully added or updated member on Brevo list', 'hustle' );
 				$member_status = __( 'OK', 'hustle' );
 			}
 

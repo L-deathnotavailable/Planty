@@ -61,10 +61,10 @@ class Admin_Notices {
 
 		self::$notices = array(
 			'pa-review',
-			'pinterest_notice',
+			'advanced_carousel',
 		);
 
-		delete_option( 'magazine_notice' );
+		delete_option( 'tiktok_tooltip_notice' );
 
 	}
 
@@ -106,7 +106,7 @@ class Admin_Notices {
 			return;
 		}
 
-		$this->get_pinterest_notice();
+		$this->get_adv_carousel_notice();
 
 	}
 
@@ -255,22 +255,22 @@ class Admin_Notices {
 
 	/**
 	 *
-	 * Shows admin notice for Pinterest Feed.
+	 * Shows admin notice for Advanced Carousel.
 	 *
 	 * @since 4.8.8
 	 * @access public
 	 *
 	 * @return void
 	 */
-	public function get_pinterest_notice() {
+	public function get_adv_carousel_notice() {
 
-		$pinterest_notice = get_option( 'pinterest_notice' );
+		$adv_carousel = get_option( 'advanced_carousel' );
 
-		if ( '1' === $pinterest_notice ) {
+		if ( '1' === $adv_carousel ) {
 			return;
 		}
 
-		$notice_url = Helper_Functions::get_campaign_link( 'https://premiumaddons.com/elementor-pinterest-feed-widget/', 'pinterest-notification', 'wp-dash', 'pinterest' );
+		$adv_carousel = Helper_Functions::get_campaign_link( 'https://premiumaddons.com/elementor-advanced-carousel-widget/', 'advanced-carousel-notification', 'wp-dash', 'advanced-carousel' );
 
 		?>
 
@@ -280,11 +280,11 @@ class Admin_Notices {
 			</div>
 			<div class="pa-text-wrap">
 				<p>
-					<strong><?php echo __( 'Premium Pinterest Feed widget', 'premium-addons-for-elemetor' ); ?></strong>
-					<?php echo sprintf( __( 'is now available in Premium Addons for Elementor. <a href="%s" target="_blank">Check it out now!</a>', 'premium-addons-for-elementor' ), $notice_url ); ?>
+					<strong><?php echo __( 'Premium Advanced Media Carousel widget', 'premium-addons-for-elemetor' ); ?></strong>
+					<?php echo sprintf( __( 'is now available in Premium Addons for Elementor. <a href="%s" target="_blank">Check it out now!</a>', 'premium-addons-for-elementor' ), $adv_carousel ); ?>
 				</p>
 			</div>
-			<div class="pa-notice-close" data-notice="pinterest">
+			<div class="pa-notice-close" data-notice="carousel">
 				<span class="dashicons dashicons-dismiss"></span>
 			</div>
 		</div>

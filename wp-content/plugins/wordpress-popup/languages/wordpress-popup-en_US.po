@@ -1,12 +1,12 @@
-# Copyright (C) 2023 Hustle 7.8.0
-# This file is distributed under the same license as the Hustle 7.8.0 package.
+# Copyright (C) 2023 Hustle 7.8.2
+# This file is distributed under the same license as the Hustle 7.8.2 package.
 msgid ""
 msgstr ""
-"Project-Id-Version: Hustle 7.8.0\n"
+"Project-Id-Version: Hustle 7.8.2\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"POT-Creation-Date: 2023-06-27 16:50+0000\n"
+"POT-Creation-Date: 2023-10-12 09:41+0000\n"
 "X-Poedit-Basepath: ..\n"
 "X-Poedit-KeywordsList: __;_e;_ex:1,2c;_n:1,2;_n_noop:1,2;_nx:1,2,4c;_nx_noop:1,2,3c;_x:1,2c;esc_attr__;esc_attr_e;esc_attr_x:1,2c;esc_html__;esc_html_e;esc_html_x:1,2c\n"
 "X-Poedit-SearchPath-0: .\n"
@@ -98,7 +98,7 @@ msgstr ""
 msgid "Color value"
 msgstr ""
 
-#: inc/class-hustle-dashboard-admin.php:38, views/admin/settings/general/dashboard.php:36
+#: inc/class-hustle-dashboard-admin.php:38, inc/class-hustle-module-admin.php:126, views/admin/settings/general/dashboard.php:36
 msgid "Dashboard"
 msgstr ""
 
@@ -138,16 +138,12 @@ msgstr ""
 msgid "Total Modules"
 msgstr ""
 
-#: inc/class-hustle-dashboard-admin.php:281, inc/class-hustle-dashboard-admin.php:317, inc/class-hustle-module-page-abstract.php:805, inc/providers/mailpoet/class-hustle-mailpoet-form-settings.php:383, inc/providers/mailster/class-hustle-mailster-form-settings.php:433, views/admin/integrations-page/summary.php:33, views/admin/commons/sui-wizard/elements/image-fitting.php:35, views/admin/commons/sui-wizard/tab-content/call-to-action.php:137, views/admin/commons/sui-wizard/tab-visibility/conditions.php:1416, views/admin/commons/sui-wizard/tab-appearance/row-typography/advanced/text-decoration.php:12, views/admin/commons/sui-wizard/tab-appearance/row-typography/advanced/text-transform.php:12
+#: inc/class-hustle-dashboard-admin.php:281, inc/class-hustle-dashboard-admin.php:317, inc/class-hustle-module-page-abstract.php:805, inc/providers/mailpoet/class-hustle-mailpoet-form-settings.php:383, inc/providers/mailster/class-hustle-mailster-form-settings.php:433, views/admin/integrations-page/summary.php:33, views/admin/commons/sui-wizard/elements/image-fitting.php:35, views/admin/commons/sui-wizard/tab-content/call-to-action.php:137, views/admin/commons/sui-wizard/tab-visibility/conditions.php:1396, views/admin/commons/sui-wizard/tab-appearance/row-typography/advanced/text-decoration.php:12, views/admin/commons/sui-wizard/tab-appearance/row-typography/advanced/text-transform.php:12
 msgid "None"
 msgstr ""
 
 #: inc/class-hustle-dashboard-admin.php:314
 msgid "Unknown"
-msgstr ""
-
-#: inc/class-hustle-module-admin.php:126, inc/hustle-settings-page.php:30, views/admin/settings.php:59, views/admin/commons/sui-wizard/dialogs/edit-field.php:17
-msgid "Settings"
 msgstr ""
 
 #: inc/class-hustle-module-admin.php:127, views/admin/global/sui-components/footer/navigation.php:29, views/admin/global/sui-components/footer/navigation.php:16
@@ -162,8 +158,8 @@ msgstr ""
 msgid "Upgrade"
 msgstr ""
 
-#: inc/class-hustle-module-admin.php:134, views/admin/upsell.php:17
-msgid "Upgrade to Hustle Pro"
+#: inc/class-hustle-module-admin.php:134
+msgid "Upgrade For 60% Off!"
 msgstr ""
 
 #: inc/class-hustle-module-admin.php:168
@@ -360,11 +356,11 @@ msgstr ""
 msgid "Browser Cookie"
 msgstr ""
 
-#: inc/class-hustle-module-page-abstract.php:797, views/admin/commons/sui-wizard/tab-visibility/conditions.php:683
+#: inc/class-hustle-module-page-abstract.php:797, views/admin/commons/sui-wizard/tab-visibility/conditions.php:663
 msgid "Mobile only"
 msgstr ""
 
-#: inc/class-hustle-module-page-abstract.php:798, views/admin/commons/sui-wizard/tab-visibility/conditions.php:698
+#: inc/class-hustle-module-page-abstract.php:798, views/admin/commons/sui-wizard/tab-visibility/conditions.php:678
 msgid "Desktop only"
 msgstr ""
 
@@ -384,19 +380,19 @@ msgstr ""
 msgid "No"
 msgstr ""
 
-#: inc/class-hustle-module-page-abstract.php:806, views/admin/commons/sui-wizard/tab-visibility/conditions.php:1011
+#: inc/class-hustle-module-page-abstract.php:806, views/admin/commons/sui-wizard/tab-visibility/conditions.php:991
 msgid "True"
 msgstr ""
 
-#: inc/class-hustle-module-page-abstract.php:807, views/admin/commons/sui-wizard/tab-visibility/conditions.php:1022
+#: inc/class-hustle-module-page-abstract.php:807, views/admin/commons/sui-wizard/tab-visibility/conditions.php:1002
 msgid "False"
 msgstr ""
 
-#: inc/class-hustle-module-page-abstract.php:808, views/admin/commons/sui-wizard/tab-visibility/conditions.php:554
+#: inc/class-hustle-module-page-abstract.php:808, views/admin/commons/sui-wizard/tab-visibility/conditions.php:534
 msgid "Logged in"
 msgstr ""
 
-#: inc/class-hustle-module-page-abstract.php:809, views/admin/commons/sui-wizard/tab-visibility/conditions.php:565
+#: inc/class-hustle-module-page-abstract.php:809, views/admin/commons/sui-wizard/tab-visibility/conditions.php:545
 msgid "Logged out"
 msgstr ""
 
@@ -1256,6 +1252,10 @@ msgstr ""
 #. translators: Plugin name
 #: inc/hustle-settings-page.php:28
 msgid "%s Settings"
+msgstr ""
+
+#: inc/hustle-settings-page.php:30, views/admin/settings.php:59, views/admin/commons/sui-wizard/dialogs/edit-field.php:17
+msgid "Settings"
 msgstr ""
 
 #: inc/hustle-settings-page.php:96
@@ -3398,11 +3398,11 @@ msgstr ""
 msgid "Module"
 msgstr ""
 
-#: views/admin/entries.php:148
+#: views/admin/entries.php:140
 msgid "Almost there!"
 msgstr ""
 
-#: views/admin/entries.php:150
+#: views/admin/entries.php:142
 msgid "Select the popup, slide-in or embed to view the corresponding email list."
 msgstr ""
 
@@ -3469,6 +3469,10 @@ msgstr ""
 
 #: views/admin/settings.php:93, views/admin/commons/sui-wizard/navigation.php:59
 msgid "Navigate"
+msgstr ""
+
+#: views/admin/upsell.php:17
+msgid "Upgrade to Hustle Pro"
 msgstr ""
 
 #. translators: 1. opening 'strong' tag, 2. closing 'strong' tag
@@ -3766,7 +3770,7 @@ msgid "SendGrid. Enabled when you activated and setup SendGrid on Email Collecti
 msgstr ""
 
 #: views/general/policy-text.php:116
-msgid "SendinBlue. Enabled when you activated and setup SendinBlue on Email Collection settings."
+msgid "Brevo. Enabled when you activated and setup Brevo on Email Collection settings."
 msgstr ""
 
 #: views/general/policy-text.php:117
@@ -3777,91 +3781,36 @@ msgstr ""
 msgid "Zapier. Enabled when you activated and setup Zapier on Email Collection settings."
 msgstr ""
 
-#: views/general/policy-text.php:123
-msgid "We use ActiveCampaign to manage our subscriber lists. Their privacy policy can be found here : https://www.activecampaign.com/privacy-policy/."
-msgstr ""
-
-#: views/general/policy-text.php:124
-msgid "We use Aweber to manage our subscriber. Their privacy policy can be found here : https://www.aweber.com/privacy.htm."
-msgstr ""
-
-#: views/general/policy-text.php:125
-msgid "We use Campaign Monitor to manage our subscriber. Their privacy policy can be found here : https://www.campaignmonitor.com/policies/#privacy-policy."
-msgstr ""
-
-#: views/general/policy-text.php:126
-msgid "We use Constant Contact to manage our subscriber. Their privacy policy can be found here : https://www.endurance.com/privacy."
-msgstr ""
-
-#: views/general/policy-text.php:127
-msgid "We use ConvertKit to manage our subscriber. Their privacy policy can be found here : https://convertkit.com/privacy/."
-msgstr ""
-
-#: views/general/policy-text.php:128
-msgid "We use e-Newsletter to manage our subscriber. You can learn more about it here https://wpmudev.com/project/e-newsletter/."
-msgstr ""
-
-#: views/general/policy-text.php:129
-msgid "We use GetResponse to manage our subscriber lists. Their privacy policy can be found here : https://www.getresponse.com/legal/privacy.html?lang=en."
-msgstr ""
-
-#: views/general/policy-text.php:130
-msgid "We use HubSpot to manage our subscriber. Their privacy policy can be found here : https://legal.hubspot.com/legal-stuff."
-msgstr ""
-
-#: views/general/policy-text.php:131
-msgid "We use iContact to manage our subscriber. Their privacy policy can be found here : https://www.icontact.com/legal/privacy."
-msgstr ""
-
-#: views/general/policy-text.php:132
-msgid "We use Keap to manage our subscriber. Their privacy policy can be found here : https://keap.com/legal/privacy-policy."
-msgstr ""
-
-#: views/general/policy-text.php:133
-msgid "We use Mad Mimi to manage our subscriber. Their privacy policy can be found here : https://madmimi.com/legal/terms."
-msgstr ""
-
-#: views/general/policy-text.php:134
-msgid "We use Mailchimp to manage our subscriber list. Their privacy policy can be found here : https://mailchimp.com/legal/privacy/."
-msgstr ""
-
-#: views/general/policy-text.php:135
-msgid "We use MailerLite to manage our subscriber. Their privacy policy can be found here : https://www.mailerlite.com/privacy-policy."
-msgstr ""
-
-#: views/general/policy-text.php:136
-msgid "We use Mautic to manage our subscriber. Their privacy policy can be found here : https://www.mautic.org/privacy-policy/."
-msgstr ""
-
-#: views/general/policy-text.php:137
-msgid "We use Pinterest to share media. Their privacy policy can be found here : https://policy.pinterest.com/privacy-policy/."
-msgstr ""
-
-#: views/general/policy-text.php:138
-msgid "We use reCAPTCHA to protect your website from fraud and abuse. Their privacy policy can be found here : https://policies.google.com/privacy."
-msgstr ""
-
-#: views/general/policy-text.php:139
-msgid "We use SendGrid to manage our subscriber. Their privacy policy can be found here : https://sendgrid.com/policies/privacy/."
-msgstr ""
-
-#: views/general/policy-text.php:140
-msgid "We use SendinBlue to manage our subscriber. Their privacy policy can be found here : https://www.sendinblue.com/legal/privacypolicy/."
-msgstr ""
-
-#: views/general/policy-text.php:141
-msgid "We use Sendy to manage our subscriber. Their privacy policy can be found here : https://sendy.co/privacy-policy."
-msgstr ""
-
-#: views/general/policy-text.php:142
-msgid "We use Zapier to manage our integration data. Their privacy policy can be found here : https://zapier.com/privacy/."
-msgstr ""
-
+#. translators: 1. Company name 2. Privacy link.
 #: views/general/policy-text.php:145
+msgid "We use %1$s to manage our subscriber lists. Their privacy policy can be found here : %2$s."
+msgstr ""
+
+#. translators: 1. Company name 2. Privacy link.
+#: views/general/policy-text.php:149
+msgid "We use %1$s to manage our subscriber. You can learn more about it here %2$s."
+msgstr ""
+
+#. translators: 1. Company name 2. Privacy link.
+#: views/general/policy-text.php:150
+msgid "We use %1$s to share media. Their privacy policy can be found here : %2$s."
+msgstr ""
+
+#. translators: 1. Company name 2. Privacy link.
+#: views/general/policy-text.php:151
+msgid "We use %1$s to protect your website from fraud and abuse. Their privacy policy can be found here : %2$s."
+msgstr ""
+
+#. translators: 1. Company name 2. Privacy link.
+#: views/general/policy-text.php:152
+msgid "We use %1$s to manage our integration data. Their privacy policy can be found here : %2$s."
+msgstr ""
+
+#: views/general/policy-text.php:155
 msgid "Cookies"
 msgstr ""
 
-#: views/general/policy-text.php:148
+#: views/general/policy-text.php:158
 msgid ""
 "By default Hustle uses cookies to count how many times each module is visualized. Cookies might be used to handle other features such as display settings, used when a module should not be displayed for a certain time,\n"
 "		whether the user commented before, whether the user has subscribed, among others, if their related settings are enabled."
@@ -3871,25 +3820,25 @@ msgstr ""
 msgid "Undefined"
 msgstr ""
 
-#: inc/providers/activecampaign/hustle-activecampaign-api.php:88
+#: inc/providers/activecampaign/hustle-activecampaign-api.php:86
 msgid "Failed to process request, make sure your API URL and API KEY are correct and your server has internet connection."
 msgstr ""
 
 #. translators: error message
-#: inc/providers/activecampaign/hustle-activecampaign-api.php:101, inc/providers/campaignmonitor/hustle-campaignmonitor-api.php:206, inc/providers/madmimi/hustle-mad-mimi-api.php:204, inc/providers/mautic/hustle-mautic-api.php:241, inc/providers/sendinblue/hustle-sendinblue-api.php:230
+#: inc/providers/activecampaign/hustle-activecampaign-api.php:99, inc/providers/campaignmonitor/hustle-campaignmonitor-api.php:206, inc/providers/madmimi/hustle-mad-mimi-api.php:204, inc/providers/mautic/hustle-mautic-api.php:241, inc/providers/sendinblue/hustle-sendinblue-api.php:230
 msgid "Failed to processing request : %s"
 msgstr ""
 
 #. translators: error message
-#: inc/providers/activecampaign/hustle-activecampaign-api.php:120
+#: inc/providers/activecampaign/hustle-activecampaign-api.php:118
 msgid "Failed to get ActiveCampaign data. %s"
 msgstr ""
 
-#: inc/providers/activecampaign/hustle-activecampaign-api.php:278, inc/providers/activecampaign/hustle-activecampaign-api.php:276, inc/providers/convertkit/hustle-convertkit-api.php:210, inc/providers/convertkit/hustle-convertkit-api.php:230, inc/providers/getresponse/hustle-get-response-api.php:184, inc/providers/getresponse/hustle-get-response-api.php:201, inc/providers/icontact/hustle-icontact-api.php:317
+#: inc/providers/activecampaign/hustle-activecampaign-api.php:276, inc/providers/activecampaign/hustle-activecampaign-api.php:274, inc/providers/convertkit/hustle-convertkit-api.php:210, inc/providers/convertkit/hustle-convertkit-api.php:230, inc/providers/getresponse/hustle-get-response-api.php:184, inc/providers/getresponse/hustle-get-response-api.php:201, inc/providers/icontact/hustle-icontact-api.php:317
 msgid "Successful subscription"
 msgstr ""
 
-#: inc/providers/activecampaign/hustle-activecampaign-api.php:286
+#: inc/providers/activecampaign/hustle-activecampaign-api.php:284
 msgid "Unexpected error occurred."
 msgstr ""
 
@@ -5090,24 +5039,24 @@ msgid "Missing required API Credential"
 msgstr ""
 
 #: inc/providers/sendinblue/hustle-sendinblue-form-hooks.php:178
-msgid "Successfully added or updated member on SendinBlue list"
+msgid "Successfully added or updated member on Brevo list"
 msgstr ""
 
 #: inc/providers/sendinblue/hustle-sendinblue.php:187
-msgid "SendinBlue Added"
+msgid "Brevo Added"
 msgstr ""
 
 #: inc/providers/sendinblue/hustle-sendinblue.php:225
-msgid "Please enter a valid SendinBlue API key"
+msgid "Please enter a valid Brevo API key"
 msgstr ""
 
 #: inc/providers/sendinblue/hustle-sendinblue.php:264
-msgid "Configure SendinBlue"
+msgid "Configure Brevo"
 msgstr ""
 
-#. translators: 1. opening 'a' tag to sSendinBlue API page, 2. closing 'a' tag
+#. translators: 1. opening 'a' tag to Brevo API page, 2. closing 'a' tag
 #: inc/providers/sendinblue/hustle-sendinblue.php:267
-msgid "To get %1$sSendinBlue%2$s API key v3.0 log in %3$scampaigns dashboard%4$s and click on %1$sSMTP & API%2$s in left menu."
+msgid "To get %1$sBrevo%2$s API key v3.0 log in %3$scampaigns dashboard%4$s and click on %1$sSMTP & API%2$s in left menu."
 msgstr ""
 
 #: inc/providers/sendy/hustle-sendy-api.php:113
@@ -5266,7 +5215,7 @@ msgstr ""
 msgid "Activate Zapier to start using it on your forms."
 msgstr ""
 
-#: views/admin/commons/modal-template.php:72, views/admin/dialogs/modal-integration.php:32, views/admin/dialogs/modal-migrate-aweber.php:29, views/admin/dialogs/modal-preview.php:34, views/admin/dialogs/remove-active-integration.php:27, views/admin/dashboard/dialogs/fresh-install.php:59, views/admin/dashboard/dialogs/fresh-install.php:112, views/admin/dashboard/dialogs/release-highlight.php:32, views/admin/dashboard/dialogs/review-conditions.php:30, views/admin/commons/sui-listing/dialogs/delete-module.php:33, views/admin/commons/sui-wizard/dialogs/add-schedule.php:55, views/admin/commons/sui-wizard/dialogs/add-schedule.php:68, views/admin/commons/sui-listing/dialogs/create-module/create-non-sshare.php:23, views/admin/commons/sui-listing/dialogs/create-module/create-sshare.php:18, views/admin/commons/sui-listing/dialogs/create-module/non-sshare-templates-step.php:17
+#: views/admin/commons/modal-template.php:72, views/admin/dialogs/modal-integration.php:32, views/admin/dialogs/modal-migrate-aweber.php:29, views/admin/dialogs/modal-preview.php:34, views/admin/dialogs/remove-active-integration.php:27, views/admin/dashboard/dialogs/fresh-install.php:59, views/admin/dashboard/dialogs/fresh-install.php:112, views/admin/dashboard/dialogs/release-highlight.php:32, views/admin/dashboard/dialogs/review-conditions.php:30, views/admin/commons/sui-listing/dialogs/delete-module.php:33, views/admin/commons/sui-wizard/dialogs/add-schedule.php:55, views/admin/commons/sui-wizard/dialogs/add-schedule.php:68, views/admin/commons/sui-listing/dialogs/create-module/create-non-sshare.php:23, views/admin/commons/sui-listing/dialogs/create-module/create-sshare.php:16, views/admin/commons/sui-listing/dialogs/create-module/non-sshare-templates-step.php:17
 msgid "Close this dialog window"
 msgstr ""
 
@@ -5985,8 +5934,7 @@ msgid "This field is required."
 msgstr ""
 
 #. translators: module type
-#. translators: module's type capitalized and in singular.
-#: views/admin/commons/sui-wizard/wizard.php:80, views/admin/commons/sui-listing/dialogs/create-module/create-sshare.php:71
+#: views/admin/commons/sui-wizard/wizard.php:80
 msgid "Create New %s"
 msgstr ""
 
@@ -7356,10 +7304,6 @@ msgstr ""
 msgid "Additionally, WPMU DEV membership comes with other premium plugins ranging from marketing and SEO to performance and security, the Hub to manage unlimited websites, and our WPMU DEV guarantee."
 msgstr ""
 
-#: views/admin/commons/sui-listing/dialogs/pro-upgrade.php:70
-msgid "Upgrade to Hustle Pro!"
-msgstr ""
-
 #: views/admin/commons/sui-listing/elements/actions.php:21
 msgid "More options"
 msgstr ""
@@ -7644,7 +7588,7 @@ msgstr ""
 msgid "Show your pop-up for 24hrs on each scheduled day"
 msgstr ""
 
-#: views/admin/commons/sui-wizard/dialogs/add-schedule.php:410, views/admin/commons/sui-wizard/tab-visibility/conditions.php:1175
+#: views/admin/commons/sui-wizard/dialogs/add-schedule.php:410, views/admin/commons/sui-wizard/tab-visibility/conditions.php:1155
 msgid "From"
 msgstr ""
 
@@ -9353,7 +9297,7 @@ msgid "Choose the display options to apply these visibility conditions on. Note 
 msgstr ""
 
 #. translators: module type in small caps and in singular
-#: views/admin/commons/sui-wizard/tab-visibility/conditions.php:140
+#: views/admin/commons/sui-wizard/tab-visibility/conditions.php:139
 msgid "By default, the shortcode displays your %1$s wherever you add it. However, you can apply visibility rules on your %1$s shortcode for better control. For example, you can use visibility rules to show your %1$s to logged-in users only or visitors from a specific country only."
 msgstr ""
 
@@ -9362,405 +9306,405 @@ msgstr ""
 msgid "No visibility condition added yet. Currently, your %s will appear everywhere on your website."
 msgstr ""
 
-#: views/admin/commons/sui-wizard/tab-visibility/conditions.php:206
+#: views/admin/commons/sui-wizard/tab-visibility/conditions.php:186
 msgid "Delete visibility rule"
 msgstr ""
 
-#: views/admin/commons/sui-wizard/tab-visibility/conditions.php:213
+#: views/admin/commons/sui-wizard/tab-visibility/conditions.php:193
 msgid "Open visibility rule"
 msgstr ""
 
-#: views/admin/commons/sui-wizard/tab-visibility/conditions.php:225
+#: views/admin/commons/sui-wizard/tab-visibility/conditions.php:205
 msgid "Choose posts"
 msgstr ""
 
-#: views/admin/commons/sui-wizard/tab-visibility/conditions.php:239
+#: views/admin/commons/sui-wizard/tab-visibility/conditions.php:219
 msgid "All posts except"
 msgstr ""
 
-#: views/admin/commons/sui-wizard/tab-visibility/conditions.php:250
+#: views/admin/commons/sui-wizard/tab-visibility/conditions.php:230
 msgid "Only these posts"
 msgstr ""
 
-#: views/admin/commons/sui-wizard/tab-visibility/conditions.php:265
+#: views/admin/commons/sui-wizard/tab-visibility/conditions.php:245
 msgid "Start typing the name of posts..."
 msgstr ""
 
-#: views/admin/commons/sui-wizard/tab-visibility/conditions.php:287
+#: views/admin/commons/sui-wizard/tab-visibility/conditions.php:267
 msgid "Choose pages"
 msgstr ""
 
-#: views/admin/commons/sui-wizard/tab-visibility/conditions.php:301
+#: views/admin/commons/sui-wizard/tab-visibility/conditions.php:281
 msgid "All pages except"
 msgstr ""
 
-#: views/admin/commons/sui-wizard/tab-visibility/conditions.php:312
+#: views/admin/commons/sui-wizard/tab-visibility/conditions.php:292
 msgid "Only these pages"
 msgstr ""
 
-#: views/admin/commons/sui-wizard/tab-visibility/conditions.php:327
+#: views/admin/commons/sui-wizard/tab-visibility/conditions.php:307
 msgid "Start typing the name of pages..."
 msgstr ""
 
 #. translators: custom post type label
-#: views/admin/commons/sui-wizard/tab-visibility/conditions.php:349
+#: views/admin/commons/sui-wizard/tab-visibility/conditions.php:329
 msgid "Choose %s"
 msgstr ""
 
 #. translators: custom post type label
-#: views/admin/commons/sui-wizard/tab-visibility/conditions.php:364
+#: views/admin/commons/sui-wizard/tab-visibility/conditions.php:344
 msgid "All %s except"
 msgstr ""
 
 #. translators: custom post type label
-#: views/admin/commons/sui-wizard/tab-visibility/conditions.php:376
+#: views/admin/commons/sui-wizard/tab-visibility/conditions.php:356
 msgid "Only these %s"
 msgstr ""
 
 #. translators: custom post type label
-#: views/admin/commons/sui-wizard/tab-visibility/conditions.php:392
+#: views/admin/commons/sui-wizard/tab-visibility/conditions.php:372
 msgid "Start typing the name of %s..."
 msgstr ""
 
-#: views/admin/commons/sui-wizard/tab-visibility/conditions.php:414
+#: views/admin/commons/sui-wizard/tab-visibility/conditions.php:394
 msgid "Choose categories"
 msgstr ""
 
-#: views/admin/commons/sui-wizard/tab-visibility/conditions.php:428
+#: views/admin/commons/sui-wizard/tab-visibility/conditions.php:408
 msgid "All categories except"
 msgstr ""
 
-#: views/admin/commons/sui-wizard/tab-visibility/conditions.php:439
+#: views/admin/commons/sui-wizard/tab-visibility/conditions.php:419
 msgid "Only these categories"
 msgstr ""
 
-#: views/admin/commons/sui-wizard/tab-visibility/conditions.php:454
+#: views/admin/commons/sui-wizard/tab-visibility/conditions.php:434
 msgid "Start typing the name of categories..."
 msgstr ""
 
-#: views/admin/commons/sui-wizard/tab-visibility/conditions.php:464
+#: views/admin/commons/sui-wizard/tab-visibility/conditions.php:444
 msgid "Note that this condition affects the posts with selected categories and doesn't include category archives."
 msgstr ""
 
-#: views/admin/commons/sui-wizard/tab-visibility/conditions.php:477
+#: views/admin/commons/sui-wizard/tab-visibility/conditions.php:457
 msgid "Choose tags"
 msgstr ""
 
-#: views/admin/commons/sui-wizard/tab-visibility/conditions.php:491
+#: views/admin/commons/sui-wizard/tab-visibility/conditions.php:471
 msgid "All tags except"
 msgstr ""
 
-#: views/admin/commons/sui-wizard/tab-visibility/conditions.php:502
+#: views/admin/commons/sui-wizard/tab-visibility/conditions.php:482
 msgid "Only these tags"
 msgstr ""
 
-#: views/admin/commons/sui-wizard/tab-visibility/conditions.php:517
+#: views/admin/commons/sui-wizard/tab-visibility/conditions.php:497
 msgid "Start typing the name of tags..."
 msgstr ""
 
-#: views/admin/commons/sui-wizard/tab-visibility/conditions.php:527
+#: views/admin/commons/sui-wizard/tab-visibility/conditions.php:507
 msgid "Note that this condition affects the posts with selected tags and doesn't include tag archives."
 msgstr ""
 
-#: views/admin/commons/sui-wizard/tab-visibility/conditions.php:540
+#: views/admin/commons/sui-wizard/tab-visibility/conditions.php:520
 msgid "Visitor's status"
 msgstr ""
 
-#: views/admin/commons/sui-wizard/tab-visibility/conditions.php:583
+#: views/admin/commons/sui-wizard/tab-visibility/conditions.php:563
 msgid "Condition"
 msgstr ""
 
-#: views/admin/commons/sui-wizard/tab-visibility/conditions.php:597
+#: views/admin/commons/sui-wizard/tab-visibility/conditions.php:577
 msgid "If seen less than"
 msgstr ""
 
-#: views/admin/commons/sui-wizard/tab-visibility/conditions.php:608
+#: views/admin/commons/sui-wizard/tab-visibility/conditions.php:588
 msgid "If seen more than"
 msgstr ""
 
-#: views/admin/commons/sui-wizard/tab-visibility/conditions.php:618
+#: views/admin/commons/sui-wizard/tab-visibility/conditions.php:598
 msgid "Number of views"
 msgstr ""
 
-#: views/admin/commons/sui-wizard/tab-visibility/conditions.php:626
+#: views/admin/commons/sui-wizard/tab-visibility/conditions.php:606
 msgid "E.g. 10"
 msgstr ""
 
-#: views/admin/commons/sui-wizard/tab-visibility/conditions.php:636
+#: views/admin/commons/sui-wizard/tab-visibility/conditions.php:616
 msgid "Reset cookie through"
 msgstr ""
 
-#: views/admin/commons/sui-wizard/tab-visibility/conditions.php:664
+#: views/admin/commons/sui-wizard/tab-visibility/conditions.php:644
 msgid "Choose device"
 msgstr ""
 
-#: views/admin/commons/sui-wizard/tab-visibility/conditions.php:714
+#: views/admin/commons/sui-wizard/tab-visibility/conditions.php:694
 msgid "Mobile devices include both Phone and Tablet."
 msgstr ""
 
-#: views/admin/commons/sui-wizard/tab-visibility/conditions.php:731
+#: views/admin/commons/sui-wizard/tab-visibility/conditions.php:711
 msgid "Choose referrer"
 msgstr ""
 
-#: views/admin/commons/sui-wizard/tab-visibility/conditions.php:745
+#: views/admin/commons/sui-wizard/tab-visibility/conditions.php:725
 msgid "Specific referrer"
 msgstr ""
 
-#: views/admin/commons/sui-wizard/tab-visibility/conditions.php:756
+#: views/admin/commons/sui-wizard/tab-visibility/conditions.php:736
 msgid "Not a specific referrer"
 msgstr ""
 
-#: views/admin/commons/sui-wizard/tab-visibility/conditions.php:765
+#: views/admin/commons/sui-wizard/tab-visibility/conditions.php:745
 msgid "Enter the referrer URL"
 msgstr ""
 
-#: views/admin/commons/sui-wizard/tab-visibility/conditions.php:769
+#: views/admin/commons/sui-wizard/tab-visibility/conditions.php:749
 msgid "It can be a full URL or a pattern like “.website.com”. You can use wildcards in URLs. Enter one pattern/URL per line."
 msgstr ""
 
-#: views/admin/commons/sui-wizard/tab-visibility/conditions.php:782
+#: views/admin/commons/sui-wizard/tab-visibility/conditions.php:762
 msgid "Choose source of arrival"
 msgstr ""
 
-#: views/admin/commons/sui-wizard/tab-visibility/conditions.php:793
+#: views/admin/commons/sui-wizard/tab-visibility/conditions.php:773
 msgid "Direct"
 msgstr ""
 
 #. translators: module type in small caps and in singular
-#: views/admin/commons/sui-wizard/tab-visibility/conditions.php:798
+#: views/admin/commons/sui-wizard/tab-visibility/conditions.php:778
 msgid "Visitor enters the URL of the page containing this %s directly inside the browser's address bar."
 msgstr ""
 
-#: views/admin/commons/sui-wizard/tab-visibility/conditions.php:811
+#: views/admin/commons/sui-wizard/tab-visibility/conditions.php:791
 msgid "An external page"
 msgstr ""
 
 #. translators: module type in small caps and in singular
-#: views/admin/commons/sui-wizard/tab-visibility/conditions.php:816
+#: views/admin/commons/sui-wizard/tab-visibility/conditions.php:796
 msgid "Visitor arrives on the page containing this %s from another website."
 msgstr ""
 
-#: views/admin/commons/sui-wizard/tab-visibility/conditions.php:829
+#: views/admin/commons/sui-wizard/tab-visibility/conditions.php:809
 msgid "An internal page"
 msgstr ""
 
 #. translators: module type in small caps and in singular
-#: views/admin/commons/sui-wizard/tab-visibility/conditions.php:834
+#: views/admin/commons/sui-wizard/tab-visibility/conditions.php:814
 msgid "Visitor arrives on the page containing this %s from another page on your website."
 msgstr ""
 
-#: views/admin/commons/sui-wizard/tab-visibility/conditions.php:847
+#: views/admin/commons/sui-wizard/tab-visibility/conditions.php:827
 msgid "A search engine"
 msgstr ""
 
 #. translators: module type in small caps and in singular
-#: views/admin/commons/sui-wizard/tab-visibility/conditions.php:852
+#: views/admin/commons/sui-wizard/tab-visibility/conditions.php:832
 msgid "Visitor arrives on the page containing this %s from a search engine result."
 msgstr ""
 
-#: views/admin/commons/sui-wizard/tab-visibility/conditions.php:865
+#: views/admin/commons/sui-wizard/tab-visibility/conditions.php:845
 msgid "Not a search engine"
 msgstr ""
 
 #. translators: module type in small caps and in singular
-#: views/admin/commons/sui-wizard/tab-visibility/conditions.php:870
+#: views/admin/commons/sui-wizard/tab-visibility/conditions.php:850
 msgid "Visitor arrives on the page containing this %s from anywhere except a search engine result."
 msgstr ""
 
-#: views/admin/commons/sui-wizard/tab-visibility/conditions.php:883
+#: views/admin/commons/sui-wizard/tab-visibility/conditions.php:863
 msgid "Choose specific urls"
 msgstr ""
 
-#: views/admin/commons/sui-wizard/tab-visibility/conditions.php:897
+#: views/admin/commons/sui-wizard/tab-visibility/conditions.php:877
 msgid "All URLs except"
 msgstr ""
 
-#: views/admin/commons/sui-wizard/tab-visibility/conditions.php:908
+#: views/admin/commons/sui-wizard/tab-visibility/conditions.php:888
 msgid "Only these URLs"
 msgstr ""
 
-#: views/admin/commons/sui-wizard/tab-visibility/conditions.php:917
+#: views/admin/commons/sui-wizard/tab-visibility/conditions.php:897
 msgid "Enter the URLs"
 msgstr ""
 
-#: views/admin/commons/sui-wizard/tab-visibility/conditions.php:921
+#: views/admin/commons/sui-wizard/tab-visibility/conditions.php:901
 msgid "Enter only one URL per line. You can use wildcards in URLs. Ensure the correct protocol - \"http://\" or \"https://\" - is used, or do not include the protocol at all so the URL will apply for both protocols."
 msgstr ""
 
-#: views/admin/commons/sui-wizard/tab-visibility/conditions.php:934
+#: views/admin/commons/sui-wizard/tab-visibility/conditions.php:914
 msgid "Choose visitor’s browser"
 msgstr ""
 
-#: views/admin/commons/sui-wizard/tab-visibility/conditions.php:948
+#: views/admin/commons/sui-wizard/tab-visibility/conditions.php:928
 msgid "All browser except"
 msgstr ""
 
-#: views/admin/commons/sui-wizard/tab-visibility/conditions.php:959
+#: views/admin/commons/sui-wizard/tab-visibility/conditions.php:939
 msgid "Only these browsers"
 msgstr ""
 
-#: views/admin/commons/sui-wizard/tab-visibility/conditions.php:972
+#: views/admin/commons/sui-wizard/tab-visibility/conditions.php:952
 msgid "Start typing the name of browsers..."
 msgstr ""
 
-#: views/admin/commons/sui-wizard/tab-visibility/conditions.php:996
+#: views/admin/commons/sui-wizard/tab-visibility/conditions.php:976
 msgid "If the visitor has ever commented before is"
 msgstr ""
 
 #. translators: 1. opening 'strong' tag, 2. closing 'strong' tag
-#: views/admin/commons/sui-wizard/tab-visibility/conditions.php:1038
+#: views/admin/commons/sui-wizard/tab-visibility/conditions.php:1018
 msgid "You might also want to combine this condition along with %1$sVisitor's logged in status%2$s."
 msgstr ""
 
-#: views/admin/commons/sui-wizard/tab-visibility/conditions.php:1049
+#: views/admin/commons/sui-wizard/tab-visibility/conditions.php:1029
 msgid "Choose visitor’s country"
 msgstr ""
 
-#: views/admin/commons/sui-wizard/tab-visibility/conditions.php:1063
+#: views/admin/commons/sui-wizard/tab-visibility/conditions.php:1043
 msgid "Any country except"
 msgstr ""
 
-#: views/admin/commons/sui-wizard/tab-visibility/conditions.php:1074
+#: views/admin/commons/sui-wizard/tab-visibility/conditions.php:1054
 msgid "Only these countries"
 msgstr ""
 
-#: views/admin/commons/sui-wizard/tab-visibility/conditions.php:1087
+#: views/admin/commons/sui-wizard/tab-visibility/conditions.php:1067
 msgid "Start typing the name of countries..."
 msgstr ""
 
-#: views/admin/commons/sui-wizard/tab-visibility/conditions.php:1111
+#: views/admin/commons/sui-wizard/tab-visibility/conditions.php:1091
 msgid "Choose user roles"
 msgstr ""
 
-#: views/admin/commons/sui-wizard/tab-visibility/conditions.php:1125, views/admin/commons/sui-wizard/tab-visibility/conditions.php:1229, views/admin/commons/sui-wizard/tab-visibility/conditions.php:1289, views/admin/commons/sui-wizard/tab-visibility/conditions.php:1452, views/admin/commons/sui-wizard/tab-visibility/conditions.php:1515, views/admin/commons/sui-wizard/tab-visibility/conditions.php:1578, views/admin/commons/sui-wizard/tab-visibility/conditions.php:1637
+#: views/admin/commons/sui-wizard/tab-visibility/conditions.php:1105, views/admin/commons/sui-wizard/tab-visibility/conditions.php:1209, views/admin/commons/sui-wizard/tab-visibility/conditions.php:1269, views/admin/commons/sui-wizard/tab-visibility/conditions.php:1432, views/admin/commons/sui-wizard/tab-visibility/conditions.php:1495, views/admin/commons/sui-wizard/tab-visibility/conditions.php:1558, views/admin/commons/sui-wizard/tab-visibility/conditions.php:1617
 msgid "All except"
 msgstr ""
 
-#: views/admin/commons/sui-wizard/tab-visibility/conditions.php:1136, views/admin/commons/sui-wizard/tab-visibility/conditions.php:1240, views/admin/commons/sui-wizard/tab-visibility/conditions.php:1300, views/admin/commons/sui-wizard/tab-visibility/conditions.php:1463, views/admin/commons/sui-wizard/tab-visibility/conditions.php:1526, views/admin/commons/sui-wizard/tab-visibility/conditions.php:1589, views/admin/commons/sui-wizard/tab-visibility/conditions.php:1648
+#: views/admin/commons/sui-wizard/tab-visibility/conditions.php:1116, views/admin/commons/sui-wizard/tab-visibility/conditions.php:1220, views/admin/commons/sui-wizard/tab-visibility/conditions.php:1280, views/admin/commons/sui-wizard/tab-visibility/conditions.php:1443, views/admin/commons/sui-wizard/tab-visibility/conditions.php:1506, views/admin/commons/sui-wizard/tab-visibility/conditions.php:1569, views/admin/commons/sui-wizard/tab-visibility/conditions.php:1628
 msgid "Only these"
 msgstr ""
 
-#: views/admin/commons/sui-wizard/tab-visibility/conditions.php:1146
+#: views/admin/commons/sui-wizard/tab-visibility/conditions.php:1126
 msgid "Start typing the user roles..."
 msgstr ""
 
-#: views/admin/commons/sui-wizard/tab-visibility/conditions.php:1171
+#: views/admin/commons/sui-wizard/tab-visibility/conditions.php:1151
 msgid "day(s) past the registration day"
 msgstr ""
 
-#: views/admin/commons/sui-wizard/tab-visibility/conditions.php:1192
+#: views/admin/commons/sui-wizard/tab-visibility/conditions.php:1172
 msgid "Up to"
 msgstr ""
 
-#: views/admin/commons/sui-wizard/tab-visibility/conditions.php:1207
+#: views/admin/commons/sui-wizard/tab-visibility/conditions.php:1187
 msgid "Note: \"0\" in the From field means immediately after registration and \"0\" in the Up to field means forever."
 msgstr ""
 
-#: views/admin/commons/sui-wizard/tab-visibility/conditions.php:1215
+#: views/admin/commons/sui-wizard/tab-visibility/conditions.php:1195
 msgid "Choose page templates"
 msgstr ""
 
-#: views/admin/commons/sui-wizard/tab-visibility/conditions.php:1250
+#: views/admin/commons/sui-wizard/tab-visibility/conditions.php:1230
 msgid "Start typing the name of page templates..."
 msgstr ""
 
-#: views/admin/commons/sui-wizard/tab-visibility/conditions.php:1275
+#: views/admin/commons/sui-wizard/tab-visibility/conditions.php:1255
 msgid "Choose static pages"
 msgstr ""
 
-#: views/admin/commons/sui-wizard/tab-visibility/conditions.php:1311
+#: views/admin/commons/sui-wizard/tab-visibility/conditions.php:1291
 msgid "Start typing the name of static pages..."
 msgstr ""
 
-#: views/admin/commons/sui-wizard/tab-visibility/conditions.php:1334
+#: views/admin/commons/sui-wizard/tab-visibility/conditions.php:1314
 msgid "Choose archive pages"
 msgstr ""
 
-#: views/admin/commons/sui-wizard/tab-visibility/conditions.php:1348
+#: views/admin/commons/sui-wizard/tab-visibility/conditions.php:1328
 msgid "All archives except"
 msgstr ""
 
-#: views/admin/commons/sui-wizard/tab-visibility/conditions.php:1359
+#: views/admin/commons/sui-wizard/tab-visibility/conditions.php:1339
 msgid "Only these archives"
 msgstr ""
 
-#: views/admin/commons/sui-wizard/tab-visibility/conditions.php:1370
+#: views/admin/commons/sui-wizard/tab-visibility/conditions.php:1350
 msgid "Start typing the name of archives..."
 msgstr ""
 
-#: views/admin/commons/sui-wizard/tab-visibility/conditions.php:1405
+#: views/admin/commons/sui-wizard/tab-visibility/conditions.php:1385
 msgid "All WooCommerce pages"
 msgstr ""
 
-#: views/admin/commons/sui-wizard/tab-visibility/conditions.php:1425
+#: views/admin/commons/sui-wizard/tab-visibility/conditions.php:1405
 msgid "Use this condition to affect either all or none of the WooCommerce pages."
 msgstr ""
 
-#: views/admin/commons/sui-wizard/tab-visibility/conditions.php:1438
+#: views/admin/commons/sui-wizard/tab-visibility/conditions.php:1418
 msgid "Choose WooCommerce categories"
 msgstr ""
 
-#: views/admin/commons/sui-wizard/tab-visibility/conditions.php:1478
+#: views/admin/commons/sui-wizard/tab-visibility/conditions.php:1458
 msgid "Start typing the name of WooCommerce categories..."
 msgstr ""
 
-#: views/admin/commons/sui-wizard/tab-visibility/conditions.php:1488
+#: views/admin/commons/sui-wizard/tab-visibility/conditions.php:1468
 msgid "Note that this condition affects the products with selected categories and doesn't include product category archives."
 msgstr ""
 
-#: views/admin/commons/sui-wizard/tab-visibility/conditions.php:1501
+#: views/admin/commons/sui-wizard/tab-visibility/conditions.php:1481
 msgid "Choose WooCommerce tags"
 msgstr ""
 
-#: views/admin/commons/sui-wizard/tab-visibility/conditions.php:1541
+#: views/admin/commons/sui-wizard/tab-visibility/conditions.php:1521
 msgid "Start typing the name of WooCommerce tags..."
 msgstr ""
 
-#: views/admin/commons/sui-wizard/tab-visibility/conditions.php:1551
+#: views/admin/commons/sui-wizard/tab-visibility/conditions.php:1531
 msgid "Note that this condition affects the products with selected tags and doesn't include product tag archives."
 msgstr ""
 
-#: views/admin/commons/sui-wizard/tab-visibility/conditions.php:1564
+#: views/admin/commons/sui-wizard/tab-visibility/conditions.php:1544
 msgid "Choose WooCommerce archives"
 msgstr ""
 
-#: views/admin/commons/sui-wizard/tab-visibility/conditions.php:1600
+#: views/admin/commons/sui-wizard/tab-visibility/conditions.php:1580
 msgid "Start typing the name of WooCommerce archives..."
 msgstr ""
 
-#: views/admin/commons/sui-wizard/tab-visibility/conditions.php:1623
+#: views/admin/commons/sui-wizard/tab-visibility/conditions.php:1603
 msgid "Choose WooCommerce static pages"
 msgstr ""
 
-#: views/admin/commons/sui-wizard/tab-visibility/conditions.php:1659
+#: views/admin/commons/sui-wizard/tab-visibility/conditions.php:1639
 msgid "Start typing the name of WooCommerce static pages..."
 msgstr ""
 
-#: views/admin/commons/sui-wizard/tab-visibility/conditions.php:1682
+#: views/admin/commons/sui-wizard/tab-visibility/conditions.php:1662
 msgid "If a browser cookie"
 msgstr ""
 
-#: views/admin/commons/sui-wizard/tab-visibility/conditions.php:1696
+#: views/admin/commons/sui-wizard/tab-visibility/conditions.php:1676
 msgid "Exists"
 msgstr ""
 
-#: views/admin/commons/sui-wizard/tab-visibility/conditions.php:1707
+#: views/admin/commons/sui-wizard/tab-visibility/conditions.php:1687
 msgid "Doesn't exist"
 msgstr ""
 
-#: views/admin/commons/sui-wizard/tab-visibility/conditions.php:1718, views/admin/commons/sui-wizard/tab-visibility/conditions.php:1799
+#: views/admin/commons/sui-wizard/tab-visibility/conditions.php:1698, views/admin/commons/sui-wizard/tab-visibility/conditions.php:1779
 msgid "Cookie name"
 msgstr ""
 
-#: views/admin/commons/sui-wizard/tab-visibility/conditions.php:1723, views/admin/commons/sui-wizard/tab-visibility/conditions.php:1804
+#: views/admin/commons/sui-wizard/tab-visibility/conditions.php:1703, views/admin/commons/sui-wizard/tab-visibility/conditions.php:1784
 msgid "Enter cookie name"
 msgstr ""
 
-#: views/admin/commons/sui-wizard/tab-visibility/conditions.php:1734
+#: views/admin/commons/sui-wizard/tab-visibility/conditions.php:1714
 msgid "Value"
 msgstr ""
 
-#: views/admin/commons/sui-wizard/tab-visibility/conditions.php:1767, views/admin/commons/sui-wizard/tab-visibility/conditions.php:1782
+#: views/admin/commons/sui-wizard/tab-visibility/conditions.php:1747, views/admin/commons/sui-wizard/tab-visibility/conditions.php:1762
 msgid "Enter cookie value"
 msgstr ""
 
@@ -9886,10 +9830,6 @@ msgstr ""
 msgid "Learn more"
 msgstr ""
 
-#: views/admin/global/sui-components/footer/cross-sell.php:122
-msgid "Unlock now with Pro"
-msgstr ""
-
 #: views/admin/global/sui-components/footer/navigation.php:25, views/admin/global/sui-components/footer/navigation.php:17
 msgid "The Hub"
 msgstr ""
@@ -9919,7 +9859,7 @@ msgid "Membership"
 msgstr ""
 
 #. translators: module's type capitalized and in singular.
-#: views/admin/commons/sui-listing/dialogs/create-module/create-non-sshare.php:27, views/admin/commons/sui-listing/dialogs/create-module/create-sshare.php:22
+#: views/admin/commons/sui-listing/dialogs/create-module/create-non-sshare.php:27, views/admin/commons/sui-listing/dialogs/create-module/create-sshare.php:20
 msgid "Create %s"
 msgstr ""
 
@@ -9928,7 +9868,7 @@ msgstr ""
 msgid "Let's start by giving your new %s a name and choosing the type based on your goal for this campaign."
 msgstr ""
 
-#: views/admin/commons/sui-listing/dialogs/create-module/create-non-sshare.php:51, views/admin/commons/sui-listing/dialogs/create-module/create-sshare.php:58
+#: views/admin/commons/sui-listing/dialogs/create-module/create-non-sshare.php:51, views/admin/commons/sui-listing/dialogs/create-module/create-sshare.php:56
 msgid "Please add a name for this module."
 msgstr ""
 
@@ -9945,24 +9885,24 @@ msgid "Choose Template"
 msgstr ""
 
 #. translators: module's type in small caps and in singular.
-#: views/admin/commons/sui-listing/dialogs/create-module/create-sshare.php:25
+#: views/admin/commons/sui-listing/dialogs/create-module/create-sshare.php:23
 msgid "Let's give your new %s module a name. What would you like to name it?"
 msgstr ""
 
 #. translators: module's type in small caps and in singular.
-#: views/admin/commons/sui-listing/dialogs/create-module/create-sshare.php:34
+#: views/admin/commons/sui-listing/dialogs/create-module/create-sshare.php:32
 msgid "%s name"
 msgstr ""
 
-#: views/admin/commons/sui-listing/dialogs/create-module/create-sshare.php:42
+#: views/admin/commons/sui-listing/dialogs/create-module/create-sshare.php:40
 msgid "E.g. Social Sharing"
 msgstr ""
 
-#: views/admin/commons/sui-listing/dialogs/create-module/create-sshare.php:53
+#: views/admin/commons/sui-listing/dialogs/create-module/create-sshare.php:51
 msgid "Done"
 msgstr ""
 
-#: views/admin/commons/sui-listing/dialogs/create-module/create-sshare.php:60
+#: views/admin/commons/sui-listing/dialogs/create-module/create-sshare.php:58
 msgid "This will not be visible anywhere on your website"
 msgstr ""
 
